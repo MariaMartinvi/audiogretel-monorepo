@@ -1,6 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ReactMarkdown from 'react-markdown';
 import { getPostBySlug, getPostByLegacyId, getPosts, LEGACY_ID_TO_SLUG } from '../../data/blogPosts';
 import '../../styles/blogNew.css';
 
@@ -27,6 +28,10 @@ export default function BlogPostPage() {
     [allPosts, post]
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slugOrId, lang]);
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
@@ -37,8 +42,6 @@ export default function BlogPostPage() {
       month: 'long',
       year: 'numeric',
     });
-
-  const contentParagraphs = post.content.split(/\n\n/).filter(Boolean);
 
   return (
     <article className="blog-new-post">
@@ -72,9 +75,7 @@ export default function BlogPostPage() {
       </div>
 
       <div className="blog-new-post-content">
-        {contentParagraphs.map((para, i) => (
-          <p key={i}>{para}</p>
-        ))}
+        <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
 
       {related.length > 0 && (
