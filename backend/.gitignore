@@ -1,0 +1,12 @@
+.env
+firebase-credentials.json.json
+
+# FFmpeg binaries (too large for GitHub)
+ffmpeg-master-latest-win64-gpl/
+*.exe
+
+# Audio test files (but allow background music assets)
+test-audio/
+test-*.mp3
+*-test.mp3
+temp/*.mp3

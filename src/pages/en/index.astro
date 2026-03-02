@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ui } from '../../i18n/ui';
+
+const t = ui.en;
+---
+
+<BaseLayout lang="en" title={t.home.title} description={t.home.description}>
+  <h1>AudioGretel</h1>
+  <p>Personalized audio stories for children with artificial intelligence.</p>
+</BaseLayout>

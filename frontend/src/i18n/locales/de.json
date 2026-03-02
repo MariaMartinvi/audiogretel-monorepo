@@ -1,0 +1,556 @@
+{
+  "subscription": {
+    "title": "Premium-Abonnement",
+    "planTitle": "Premium-Plan",
+    "premium": {
+      "title": "Premium-Plan",
+      "features": {
+        "0": "30 Geschichten pro Monat",
+        "1": "Unbegrenzte Geschichten",
+        "2": "Jederzeit kündbar",
+        "3": "Zugang zu allen Funktionen",
+        "4": "Prioritäts-Support"
+      }
+    },
+    "planDescription": "Schalten Sie alle Funktionen mit unserem Premium-Plan frei",
+    "features": {
+      "stories": "30 Geschichten pro Monat",
+      "unlimited": "Unbegrenzte Geschichten",
+      "cancel": "Jederzeit kündbar"
+    },
+    "subscribe": "Abonnieren für 5€/Monat",
+    "processing": "Verarbeitung läuft...",
+    "alreadySubscribed": "Sie sind bereits Abonnent!",
+    "redirecting": "Weiterleitung läuft...",
+    "cancelNote": "Sie können Ihr Abonnement jederzeit über Ihr Profil kündigen, das über das Menü oben zugänglich ist.",
+    "cancelInfo": "Ihr Abonnement bleibt bis zum Ende der aktuellen Abrechnungsperiode aktiv",
+    "subscribeButton": "Premium-Plan",
+    "paymentInfo": "Sichere Zahlung über Stripe. Wir speichern keine Karteninformationen."
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "name": "Name",
+    "email": "E-Mail",
+    "subscriptionStatus": "Abonnement-Status",
+    "subscriptionFree": "Kostenloser Plan",
+    "subscriptionActive": "Premium-Plan Aktiv",
+    "subscriptionCancelled": "Abonnement Gekündigt",
+    "cancelSubscription": "Abonnement Kündigen",
+    "cancelling": "Kündigung läuft...",
+    "subscriptionCancelled": "Abonnement erfolgreich gekündigt",
+    "cancelError": "Fehler beim Kündigen des Abonnements",
+    "noActiveSubscription": "Sie haben kein aktives Abonnement",
+    "storiesRemaining": "Verfügbare Geschichten",
+    "storiesRemainingOf": "von",
+    "loading": "Lädt...",
+    "error": "Ein Fehler ist aufgetreten",
+    "premiumInfo": "Abonnieren Sie den Premium-Plan, um bis zu 30 Geschichten pro Monat zu generieren",
+    "learnMore": "Mehr erfahren",
+    "freeLimitReached": "Sie haben das Limit von 3 kostenlosen Geschichten erreicht. Abonnieren Sie, um mehr Geschichten zu generieren.",
+    "cancelInfo": "Ihr Abonnement bleibt bis zum Ende des aktuellen Abrechnungszeitraums aktiv"
+  },
+  "storyExamples": {
+    "title": "Entdecke unsere Geschichten",
+    "description": "Entdecke unsere Sammlung von Beispielgeschichten für alle Altersgruppen",
+    "storyCard": {
+      "protagonist": "Protagonist",
+      "ageRange": "Jahre",
+      "readStory": "Geschichte lesen",
+      "listenAudio": "Hören"
+    },
+    "filters": {
+      "title": "Filtern nach:",
+      "level": "Niveau",
+      "language": "Sprache",
+      "age": "Alter"
+    },
+    "levels": {
+      "all": "Alle Niveaus",
+      "beginner": "Anfänger",
+      "intermediate": "Mittelstufe",
+      "advanced": "Fortgeschritten"
+    },
+    "viewStory": "Geschichte ansehen",
+    "noResults": "Keine Geschichten mit den ausgewählten Filtern gefunden.",
+    "ageGroups": {
+      "all": "Alle Altersgruppen",
+      "3to5": "3-5 Jahre",
+      "6to8": "6-8 Jahre",
+      "9to12": "9-12 Jahre"
+    },
+    "languages": {
+      "all": "Alle Sprachen",
+      "spanish": "Spanisch",
+      "english": "Englisch",
+      "catalan": "Katalanisch",
+      "german": "Deutsch",
+      "italian": "Italienisch",
+      "french": "Französisch"
+    },
+    "mockContent": {
+      "badge": "Beispiel",
+      "explanation": "Dies ist ein Beispielinhalt. Der tatsächliche Inhalt wird von Firebase geladen, wenn verfügbar."
+    },
+    "audioNotAvailable": "Audio ist für diese Geschichte nicht verfügbar.",
+    "stories": {
+      "vainCaterpillar": "Die Eitle Raupe",
+      "definitiveMatch": "Das Entscheidungsspiel",
+      "friendlyGhost": "Der Freundliche Geist",
+      "snowWhite": "Schneewittchen",
+      "enchantedForest": "Der Zauberwald",
+      "amaral": "Amaral"
+    }
+  },
+  "homepage": {
+    "heroTitle": "Erstelle Magische AudioGeschichten",
+    "heroDescription": "Personalisiere Geschichten durch die Auswahl eines einzigartigen Themas, der Namen der Protagonisten und des Niveaus der gewählten Sprache. Neben dem Einschlafen lernen die Kinder neuen Wortschatz.",
+    "featuresTitle": "Warum uns wählen?",
+    "uniqueStoriesTitle": "Einzigartige Geschichten",
+    "uniqueStoriesDescription": "Jede Geschichte ist einzigartig und für dein Kind personalisiert",
+    "multipleGenresTitle": "Mehrere Genres",
+    "multipleGenresDescription": "Wähle aus verschiedenen Genres, die den Interessen deines Kindes entsprechen",
+    "audioConversionTitle": "Audio-Konvertierung",
+    "audioConversionDescription": "Konvertiere deine Geschichten in hochwertiges Audio",
+    "languageLevelsTitle": "Angepasste Sprachniveaus",
+    "languageLevelsDescription": "Geschichten, die an verschiedene Sprachniveaus angepasst sind, von Anfänger bis Fortgeschritten",
+    "storyExamples": {
+      "title": "Entdecke unsere Geschichten",
+      "description": "Entdecke unsere Sammlung von Beispielgeschichten für alle Altersgruppen"
+    }
+  },
+  "createStoryPage": {
+    "title": "✨ Erstellen Sie Ihre Persönliche Geschichte",
+    "subtitle": "Füllen Sie das Formular aus und erstellen Sie in Sekunden eine einzigartige Audio-Geschichte"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "viewAllStories": "Alle Geschichten ansehen",
+    "seeAllStories": "Alle Geschichten ansehen",
+    "errorLoading": "Fehler beim Laden der Geschichten",
+    "retryLoading": "Wiederholen",
+    "share": "Teilen",
+    "shareNotSupported": "Teilen wird in diesem Browser nicht unterstützt"
+  },
+  "footer": {
+    "title": "KI-Geschichtengenerator",
+    "description": "Erstellen Sie fesselnde Geschichten auf Englisch mit künstlicher Intelligenz. Personalisieren, generieren und hören Sie Ihre Geschichten mit unserem kostenlosen Tool.",
+    "quickLinks": "Schnelllinks",
+    "howItWorks": "So funktioniert's",
+    "aboutUs": "Über uns",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "copyright": "KI-Geschichtengenerator. Alle Rechte vorbehalten.",
+    "madeWith": "Erstellt mit",
+    "inBarcelona": "in Barcelona",
+    "storyExamples": "Beispielgeschichten",
+    "blog": "Blog",
+    "followUs": "Folgen Sie uns"
+  },
+  "audioPlayer": {
+    "title": "Geschichten-Audio",
+    "play": "Abspielen",
+    "pause": "Pause",
+    "progress": "Audio-Fortschritt",
+    "download": "Herunterladen",
+    "downloadFileName": "geschichte-audio",
+    "loading": "Audio wird geladen..."
+  },
+  "storyDisplay": {
+    "title": "Ihre Geschichte",
+    "copyText": "Text kopieren",
+    "downloadText": "Text herunterladen",
+    "shareText": "Text teilen",
+    "shareAudio": "Audio teilen",
+    "shareNotSupported": "Teilen wird in diesem Browser nicht unterstützt",
+    "copySuccess": "Text in die Zwischenablage kopiert",
+    "shareError": "Fehler beim Teilen",
+    "textOptions": "Textoptionen",
+    "audioOptions": "Audiooptionen",
+    "generateAudio": "Audio generieren",
+    "generatingAudio": "Audio wird generiert...",
+    "audioError": "Fehler bei der Audiogenerierung",
+    "audioLimitReached": "Sie haben das Limit von 4 Audiogenerierungen erreicht",
+    "voiceType": "Stimmentyp",
+    "voiceFemale": "Weiblich (Spanien)",
+    "voiceMale": "Männlich (Spanien)",
+    "voiceFemaleLatam": "Weiblich (Lateinamerika)",
+    "voiceMaleLatam": "Männlich (Lateinamerika)",
+    "voiceFemaleEnglish": "Weiblich (Englisch)",
+    "voiceMaleEnglish": "Männlich (Englisch)",
+    "voiceFemaleCatalan": "Weiblich (Katalanisch)",
+    "voiceMaleCatalan": "Männlich (Katalanisch)",
+    "voiceFemaleGalician": "Weiblich (Galizisch)",
+    "voiceMaleGalician": "Männlich (Galizisch)",
+    "voiceFemaleBasque": "Weiblich (Baskisch)",
+    "voiceMaleBasque": "Männlich (Baskisch)",
+    "voiceFemaleGerman": "Weiblich (Deutsch)",
+    "voiceMaleGerman": "Männlich (Deutsch)",
+    "voiceFemaleItalian": "Weiblich (Italienisch)",
+    "voiceMaleItalian": "Männlich (Italienisch)",
+    "voiceFemaleFrench": "Weiblich (Französisch)",
+    "voiceMaleFrench": "Männlich (Französisch)",
+    "voiceMalePortuguesePT": "Portugiesisch (Portugal) männlich",
+    "voiceFemalePortugueseBR": "Portugiesisch (Brasilien) weiblich",
+    "voiceMalePortugueseBR": "Portugiesisch (Brasilien) männlich",
+    "speechRate": "Sprechgeschwindigkeit",
+    "speedVerySlow": "Sehr langsam",
+    "speedSlow": "Langsam",
+    "speedNormal": "Normal",
+    "speedFast": "Schnell",
+    "speedVeryFast": "Sehr schnell",
+    "backgroundMusic": "Hintergrundmusik",
+    "noMusic": "Keine Musik",
+    "randomMusic": "Zufällige Musik",
+    "relaxingMusic": "Entspannend",
+    "magicalMusic": "Magisch",
+    "adventureMusic": "Abenteuer",
+    "bedtimeMusic": "Zum Einschlafen",
+    "pianoMusic": "Klavier",
+    "forestMusic": "Wald",
+    "musicBoxMusic": "Spieldose",
+    "journeyMusic": "Reise",
+    "publishError": "Fehler beim Veröffentlichen der Geschichte",
+    "published": "Veröffentlicht",
+    "audioGenerationInProgress": "Audio wird generiert. Wenn Sie jetzt verlassen, geht der Fortschritt verloren. Sind Sie sicher?"
+  },
+  "storyForm": {
+    "title": "Erstelle Deine Geschichte",
+    "topicLabel": "Geschichtenthema",
+    "topic": "Geschichtenthema",
+    "topicPlaceholder": "Gib ein Thema für deine Geschichte ein...",
+    "childNamesLabel": "Kindernamen (optional)",
+    "childNames": "Kindernamen (optional)",
+    "childNamesPlaceholder": "Gib Namen durch Kommas getrennt ein...",
+    "englishLevelLabel": "Sprachniveau",
+    "englishLevel": "Sprachniveau",
+    "loginRequired": "Bitte melde dich an, um Geschichten zu erstellen",
+    "clickToLogin": "Klicke hier, um dich anzumelden",
+    "englishLevels": {
+      "beginner": "Anfänger",
+      "intermediate": "Mittelstufe",
+      "advanced": "Fortgeschritten",
+      "native": "Muttersprachler"
+    },
+    "englishLevelBeginner": "Anfänger",
+    "englishLevelIntermediate": "Mittelstufe",
+    "englishLevelAdvanced": "Fortgeschritten",
+    "lengthLabel": "Geschichtenlänge",
+    "storyLength": "Geschichtenlänge",
+    "lengths": {
+      "short": "Kurz",
+      "medium": "Mittel",
+      "long": "Lang"
+    },
+    "lengthShort": "Kurz",
+    "lengthMedium": "Mittel",
+    "lengthLong": "Lang",
+    "typeLabel": "Geschichtentyp",
+    "storyType": "Geschichtentyp",
+    "types": {
+      "original": "Original",
+      "fairyTale": "Märchen",
+      "adventure": "Abenteuer",
+      "educational": "Lehrreich",
+      "classic": "Klassisch",
+      "humor": "Humor",
+      "sciFi": "Science-Fiction",
+      "horror": "Horror",
+      "fantasy": "Fantasie"
+    },
+    "typeOriginal": "Original",
+    "typeClassic": "Klassisch",
+    "typeHumor": "Humor",
+    "typeSciFi": "Science-Fiction",
+    "typeHorror": "Horror",
+    "typeAdventure": "Abenteuer",
+    "typeFantasy": "Fantasie",
+    "ageGroupLabel": "Altersgruppe",
+    "ageGroup": "Altersgruppe",
+    "ageGroups": {
+      "default": "Standard",
+      "3to5": "3-5 Jahre",
+      "6to8": "6-8 Jahre",
+      "9to12": "9-12 Jahre"
+    },
+    "ageGroupDefault": "Standard",
+    "ageGroup3to5": "3-5 Jahre",
+    "ageGroup6to8": "6-8 Jahre",
+    "ageGroup9to12": "9-12 Jahre",
+    "creativityLevelLabel": "Kreativitätsniveau",
+    "creativityLevel": "Kreativitätsniveau",
+    "creativityLevels": {
+      "conservative": "Konservativ",
+      "balanced": "Ausgewogen",
+      "innovative": "Innovativ",
+      "standard": "Standard",
+      "creative": "Sehr Kreativ"
+    },
+    "creativityStandard": "Standard",
+    "creativityInnovative": "Innovativ",
+    "creativityCreative": "Sehr Kreativ",
+    "generateButton": "Geschichte generieren",
+    "alertTopicRequired": "Schreibe hier das Thema deiner Geschichte",
+    "storyLimitReached": "Du hast dein Limit von 3 kostenlosen Geschichten erreicht. Abonniere, um mehr Geschichten zu generieren.",
+    "premiumStoryLimitReached": "Du hast dein Limit von 30 Premium-Geschichten erreicht. Warte bis zum Tag {{day}}, um mehr Geschichten zu generieren.",
+    "updatePlan": "Plan aktualisieren",
+    "subscribe": "Abonnieren",
+    "loginRequiredWarning": "Du musst dich anmelden, um Geschichten zu konfigurieren und zu generieren. Es ist kostenlos und dauert nur wenige Sekunden!",
+    "freeLimitWarning": "Du hast dein Limit von 3 kostenlosen Geschichten erreicht. Abonniere den Premium-Plan, um bis zu 30 Geschichten pro Monat zu generieren.",
+    "premiumLimitWarning": "Du hast dein Limit von 30 Premium-Geschichten diesen Monat erreicht. Dein Abonnement erneuert sich am {{day}}. des nächsten Monats.",
+    "warningTitle": "Aktion Erforderlich",
+    "loginButton": "Anmelden",
+    "subscribeButton": "Abonnieren",
+    "waitButton": "Verstanden",
+    "cancelButton": "Abbrechen",
+    "verifyEmail": "Email Verifizieren",
+    "emailVerificationRequired": "🔐 Du musst deine Email verifizieren, bevor du Geschichten erstellen kannst.",
+    "authenticationFailed": "Authentifizierungsfehler. Ihre Sitzung ist abgelaufen.",
+    "contactUs": "kontaktieren Sie uns",
+    "generateInProgress": "Eine Geschichte wird generiert. Wenn Sie jetzt verlassen, geht der Fortschritt verloren. Sind Sie sicher?",
+    "storyGenerationWarning": "Eine Geschichte wird generiert. Wenn Sie die Seite jetzt verlassen, geht der Fortschritt verloren und Sie müssen von vorne beginnen.",
+    "audioGenerationWarning": "Audio wird generiert. Wenn Sie die Seite jetzt verlassen, geht der Fortschritt verloren und Sie müssen das Audio erneut generieren.",
+    "publishingWarning": "Die Geschichte wird veröffentlicht. Wenn Sie die Seite jetzt verlassen, wird die Veröffentlichung möglicherweise nicht korrekt abgeschlossen."
+  },
+  "login": {
+    "title": "Anmelden",
+    "subtitle": "Willkommen zurück",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+    "forgotPassword": "Passwort vergessen?",
+    "loginButton": "Anmelden",
+    "noAccount": "Noch kein Konto?",
+    "register": "Registrieren",
+    "signInWithGoogle": "Mit Google anmelden",
+    "or": "oder",
+    "loading": "Verarbeitung..."
+  },
+  "register": {
+    "title": "Konto erstellen",
+    "subtitle": "Werden Sie Teil unserer Geschichtenerzähler-Community",
+    "freeStories": "3 kostenlose Geschichten bei der Registrierung 🎁",
+    "subscribeLater": "Sie können sich später abonnieren",
+    "or": "oder",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+    "confirmPasswordLabel": "Passwort bestätigen",
+    "confirmPasswordPlaceholder": "Geben Sie Ihr Passwort erneut ein",
+    "createAccount": "Konto erstellen",
+    "alreadyAccount": "Hast du bereits ein Konto?",
+    "login": "Anmelden",
+    "signInWithGoogle": "Mit Google registrieren",
+    "passwordsDontMatch": "Die Passwörter stimmen nicht überein",
+    "loading": "Verarbeitung...",
+    "passwordValidation": "Das Passwort muss mindestens 6 Zeichen lang sein"
+  },
+  "terminos": {
+    "title": "Nutzungsbedingungen",
+    "introduccion": "Einführung",
+    "introduccionTexto": "Willkommen bei AudioGretel. Durch die Nutzung unseres Dienstes akzeptieren Sie diese Nutzungsbedingungen. Diese Bedingungen regeln Ihre Nutzung unserer Plattform zur Generierung personalisierter Geschichten.",
+    "uso": "Nutzung des Dienstes",
+    "usoTexto": "Unser Dienst dient der Generierung personalisierter Geschichten. Sie müssen den Dienst verantwortungsvoll und unter Achtung der Urheberrechte nutzen. Folgendes ist nicht gestattet: 1) Generierung illegaler, beleidigender oder unangemessener Inhalte. 2) Versuch, auf eingeschränkte Bereiche des Systems zuzugreifen. 3) Weitergabe Ihres Kontos an Dritte. 4) Nutzung des Dienstes für kommerzielle Zwecke ohne Genehmigung.",
+    "suscripcion": "Abonnement und Zahlungen",
+    "suscripcionTexto": "Wir bieten kostenlose und kostenpflichtige Pläne an. Abonnements verlängern sich automatisch und können jederzeit gekündigt werden. Zahlungen werden sicher über Stripe abgewickelt. Wir speichern keine Kreditkarteninformationen. Nutzer des kostenlosen Plans haben eingeschränkten Zugang zu bestimmten Funktionen. Der Premium-Plan bietet unbegrenzten Zugang zu allen Funktionen.",
+    "propiedad": "Geistiges Eigentum",
+    "propiedadTexto": "Die generierten Geschichten gehören dem Benutzer, der sie erstellt. AudioGretel behält sich das Recht vor, die Geschichten anonym zur Verbesserung des Dienstes zu nutzen. Die Plattform und ihre Technologie sind ausschließliches Eigentum von AudioGretel. Es ist nicht gestattet, den Code oder die Benutzeroberfläche ohne Genehmigung zu kopieren, zu modifizieren oder zu verteilen.",
+    "limitacion": "Haftungsbeschränkung",
+    "limitacionTexto": "Wir sind nicht verantwortlich für von Benutzern generierte Inhalte oder für Schäden, die durch die Nutzung des Dienstes entstehen. Der Dienst wird 'wie er ist' ohne jegliche Garantien bereitgestellt. Wir garantieren weder die kontinuierliche Verfügbarkeit des Dienstes noch die Genauigkeit der generierten Geschichten.",
+    "contacto": "Kontakt und Support",
+    "contactoTexto": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns über unser Kontaktformular. Wir bieten E-Mail-Support von Montag bis Freitag von 9:00 bis 18:00 Uhr. Für dringende technische Probleme haben Premium-Nutzer Zugang zum Prioritäts-Support."
+  },
+  "politica": {
+    "title": "Datenschutzerklärung",
+    "introduccion": "Einführung",
+    "introduccionTexto": "Bei AudioGretel nehmen wir die Privatsphäre unserer Nutzer sehr ernst. Diese Richtlinie erklärt, wie wir Ihre persönlichen Daten verwalten und Ihre Privatsphäre schützen, während Sie unseren Dienst nutzen.",
+    "datos": "Daten, die wir sammeln",
+    "datosTexto": "Wir sammeln folgende Informationen: 1) Registrierungsdaten: Name, E-Mail und Passwort (verschlüsselt). 2) Nutzungsdaten: Geschichtenpräferenzen, Generierungshistorie und Einstellungen. 3) Zahlungsdaten: sicher über Stripe verarbeitet, ohne Speicherung von Karteninformationen. 4) Cookies: zur Verbesserung der Erfahrung und Analyse der Nutzung der Website.",
+    "usoDatos": "Nutzung der Daten",
+    "usoDatosTexto": "Wir verwenden Ihre Daten für: 1) Bereitstellung und Verbesserung des Dienstes. 2) Personalisierung Ihrer Erfahrung. 3) Sichere Verarbeitung von Zahlungen. 4) Versand wichtiger Updates. 5) Beantwortung von Support-Anfragen. Wir teilen Ihre Daten nicht mit Dritten, außer für die Zahlungsabwicklung oder wenn es gesetzlich erforderlich ist.",
+    "seguridad": "Sicherheit und Schutz",
+    "seguridadTexto": "Wir implementieren robuste Sicherheitsmaßnahmen: 1) Verschlüsselung sensibler Daten. 2) Sichere Authentifizierung. 3) Schutz vor unbefugtem Zugriff. 4) Regelmäßige Backups. 5) Kontinuierliche Sicherheitsüberwachung. Zahlungsdaten werden ausschließlich über Stripe verarbeitet, unter Einhaltung höchster Sicherheitsstandards.",
+    "cookies": "Cookies",
+    "cookiesTexto": "Wir verwenden Cookies für: 1) Aufrechterhaltung Ihrer aktiven Sitzung. 2) Speicherung Ihrer Präferenzen. 3) Analyse der Nutzung der Website. 4) Verbesserung der Leistung. Sie können Ihre Cookie-Präferenzen jederzeit verwalten. Einige Funktionen sind möglicherweise nicht verfügbar, wenn Sie essentielle Cookies deaktivieren.",
+    "derechos": "Ihre Rechte",
+    "derechosTexto": "Sie haben das Recht: 1) Auf Ihre persönlichen Daten zuzugreifen. 2) Ungenaue Informationen zu korrigieren. 3) Die Löschung Ihrer Daten zu beantragen. 4) Ihre Daten in einem Standardformat zu exportieren. 5) Ihre Einwilligung jederzeit zurückzuziehen. Um diese Rechte auszuüben, kontaktieren Sie uns über unser Kontaktformular."
+  },
+  "comFunciona": {
+    "title": "So funktioniert's",
+    "paso1": {
+      "title": "1. Erstellen Sie Ihre Geschichte",
+      "description": "Wählen Sie Thema, Alter, Sprachniveau und andere Präferenzen, um Ihre Geschichte zu personalisieren."
+    },
+    "paso2": {
+      "title": "2. Geschichte generieren",
+      "description": "Unsere KI erstellt eine einzigartige, personalisierte Geschichte basierend auf Ihren Vorgaben."
+    },
+    "paso3": {
+      "title": "3. Personalisieren und teilen",
+      "description": "Fügen Sie Namen hinzu, passen Sie den Inhalt an und teilen Sie die Geschichte mit Ihrer Familie."
+    },
+    "paso4": {
+      "title": "4. Audio genießen",
+      "description": "Konvertieren Sie Ihre Geschichte in Audio mit verschiedenen Stimmen und Hintergrundmusik."
+    }
+  },
+  "sobreNosaltres": {
+    "title": "Über Uns",
+    "mision": {
+      "title": "Unsere Mission",
+      "description": "Eine innovative Plattform zu schaffen, die Eltern dabei hilft, personalisierte und lehrreiche Geschichten für ihre Kinder zu erstellen."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Die führende Plattform für die Erstellung personalisierter Geschichten mit KI zu sein und Lernen und Spaß für alle Kinder zugänglich zu machen."
+    },
+    "valors": {
+      "title": "Unsere Werte",
+      "educacio": "Qualitativ hochwertige Bildung",
+      "innovacio": "Kontinuierliche Innovation",
+      "inclusio": "Inklusion und Vielfalt",
+      "seguretat": "Sicherheit und Datenschutz"
+    },
+    "equip": {
+      "title": "Unser Team",
+      "description": "Wir sind ein Team von Technologie- und Bildungsbegeisterten, die sich dafür einsetzen, ein einzigartiges Erlebnis für jede Familie zu schaffen."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "form": {
+      "title": "Kontaktformular",
+      "name": "Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "email": "E-Mail",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Geben Sie den Betreff ein",
+      "message": "Nachricht",
+      "messagePlaceholder": "Schreiben Sie Ihre Nachricht hier...",
+      "submit": "Senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet",
+      "error": "Fehler beim Senden der Nachricht"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "emailValue": "hola@audiogretel.com",
+      "phone": "Telefon",
+      "phoneValue": "+34 900 000 000",
+      "address": "Adresse",
+      "addressValue": "Carrer de l'Exemple, 123, 08001 Barcelona",
+      "hours": "Öffnungszeiten",
+      "hoursValue": "Montag - Freitag: 9:00 - 18:00"
+    },
+    "social": {
+      "title": "Folgen Sie uns",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "navbar": {
+    "home": "Startseite",
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "languages": {
+      "en": "Englisch",
+      "es": "Spanisch",
+      "ca": "Katalanisch",
+      "fr": "Französisch",
+      "it": "Italienisch",
+      "de": "Deutsch",
+      "gl": "Galizisch",
+      "eu": "Baskisch",
+      "pt": "Portugiesisch"
+    }
+  },
+  "cookies": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies für: 1) Aufrechterhaltung Ihrer aktiven Sitzung. 2) Speicherung Ihrer Präferenzen. 3) Analyse der Nutzung der Website. 4) Verbesserung der Leistung. Sie können Ihre Cookie-Präferenzen jederzeit verwalten. Einige Funktionen sind möglicherweise nicht verfügbar, wenn Sie essentielle Cookies deaktivieren.",
+    "accept": "Alle Akzeptieren",
+    "reject": "Alle Ablehnen",
+    "moreInfo": "Weitere Informationen"
+  },
+  "languages": {
+    "title": "Sprache",
+    "all": "Alle Sprachen",
+    "en": "Englisch",
+    "es": "Spanisch",
+    "ca": "Katalanisch",
+    "fr": "Französisch",
+    "it": "Italienisch",
+    "de": "Deutsch",
+    "gl": "Galizisch",
+    "eu": "Baskisch",
+    "pt": "Portugiesisch"
+  },
+  "languageFilter": {
+    "title": "Sprache",
+    "all": "Alle Sprachen",
+    "spanish": "Spanisch",
+    "english": "Englisch",
+    "catalan": "Katalanisch",
+    "german": "Deutsch",
+    "italian": "Italienisch",
+    "french": "Französisch",
+    "galician": "Galizisch",
+    "basque": "Baskisch",
+    "portuguese": "Portugiesisch"
+  },
+  "firebaseErrors": {
+    "userNotFound": "Es existiert kein Konto mit dieser E-Mail-Adresse",
+    "invalidEmail": "Das E-Mail-Format ist nicht gültig",
+    "tooManyRequests": "Zu viele Versuche. Bitte warten Sie einen Moment, bevor Sie es erneut versuchen",
+    "expiredActionCode": "Der Link ist abgelaufen. Bitte fordern Sie einen neuen an",
+    "invalidActionCode": "Der Link ist nicht gültig oder wurde bereits verwendet",
+    "weakPassword": "Das Passwort ist zu schwach. Es muss mindestens 6 Zeichen haben",
+    "invalidCredential": "Ungültige E-Mail oder Passwort",
+    "wrongPassword": "Das Passwort ist falsch",
+    "userDisabled": "Dieses Konto wurde deaktiviert",
+    "emailAlreadyInUse": "Ein Konto mit dieser E-Mail existiert bereits",
+    "networkRequestFailed": "Verbindungsfehler. Überprüfen Sie Ihr Internet und versuchen Sie es erneut",
+    "internalError": "Interner Systemfehler. Bitte versuchen Sie es später erneut",
+    "invalidLoginCredentials": "Ungültige Anmeldedaten",
+    "accountExistsWithDifferentCredential": "Ein Konto mit dieser E-Mail existiert bereits mit einer anderen Methode",
+    "credentialAlreadyInUse": "Diese Anmeldedaten werden bereits von einem anderen Konto verwendet",
+    "operationNotAllowed": "Diese Operation ist nicht erlaubt",
+    "requiredRecentLogin": "Aus Sicherheitsgründen müssen Sie sich erneut anmelden, um diese Aktion durchzuführen"
+  },
+  "appName": "AudioGretel",
+  "testimonials": {
+    "title": "Was unsere Nutzer sagen",
+    "subtitle": "Entdecken Sie, wie AudioGretel die Art verändert, wie Kinder Geschichten lernen und genießen",
+    "testimonial1": {
+      "name": "Juanjo Mena",
+      "role": "Vater von zwei Kindern",
+      "content": "AudioGretel war ein unglaubliches Werkzeug für meine Kinder. Sie lieben es, ihre eigenen personalisierten Geschichten zu hören und haben ihr Englisch deutlich verbessert, während sie Spaß haben."
+    },
+    "testimonial2": {
+      "name": "Montserrat Villaró",
+      "role": "Grundschullehrerin",
+      "content": "Als Lehrerin schätze ich die pädagogische Qualität von AudioGretel sehr. Die Personalisierung der Geschichten und die verschiedenen Sprachniveaus machen es perfekt für das Klassenzimmer."
+    },
+    "testimonial3": {
+      "name": "Gabriel Martín",
+      "role": "Kindergartenlehrer",
+      "content": "Personalisierte Audiogeschichten sind ein hervorragendes Werkzeug für die Sprachentwicklung. Meine Schüler haben viel Spaß daran, ihre eigenen Geschichten zu erstellen und die Aussprache zu üben."
+    }
+  },
+  "learnEnglish": {
+    "pageTitle": "Englisch Lernen mit Audiogeschichten",
+    "pageSubtitle": "Die Fünf von der Erde • 3 Geschichten pro Woche • Weltraumabenteuer",
+    "methodologyProgressiveTitle": "Progressive Methode",
+    "methodologyProgressiveText": "Basierend auf dem Hören einer Reihe von Audiogeschichten, die Vokabular und Strukturen enthalten, die für jede Lernwoche geeignet sind.",
+    "methodologyNaturalTitle": "Natürliches Lernen",
+    "methodologyNaturalText": "Die Wissenschaft hat bewiesen, dass Kinder eine Sprache durch das Hören von Geschichten lernen. Wir nutzen die Schlafenszeit, um Geschichten von den Fünf von der Erde zu hören und ihre Englischkenntnisse zu verbessern.",
+    "methodologyAgesTitle": "Alter 4-7 Jahre",
+    "methodologyAgesText": "Perfekt für Kinder zwischen 4 und 7 Jahren, um das Englisch zu ergänzen, das sie in der Schule lernen. Jede Audiogeschichte beginnt mit einer Zusammenfassung des Vokabulars, das wir in der Geschichte lernen werden."
+  }
+} 

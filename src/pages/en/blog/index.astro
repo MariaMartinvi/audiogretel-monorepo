@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { ui } from '../../../i18n/ui';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import BlogSidebar from '../../../components/blog/BlogSidebar.astro';
+
+const POSTS_PER_PAGE = 10;
+const lang = 'en';
+const baseUrl = '/en';
+const t = ui[lang].blog;
+
+const allPosts = await getCollection('blogEn');
+const sorted = allPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const currentPage = 1;
+const totalPages = Math.max(1, Math.ceil(sorted.length / POSTS_PER_PAGE));
+const start = (currentPage - 1) * POSTS_PER_PAGE;
+const posts = sorted.slice(start, start + POSTS_PER_PAGE);
+
+const categories = [...new Set(sorted.map((p) => p.data.category))].sort();
+const recentPosts = sorted.slice(0, 5).map((p) => ({ slug: p.slug, title: p.data.title }));
+
+const postsForClient = sorted.map((p) => ({
+  slug: p.slug,
+  title: p.data.title,
+  excerpt: p.data.excerpt,
+  category: p.data.category,
+  date: p.data.date,
+}));
+---
+
+<BaseLayout lang={lang} title={t.title} description={t.description} canonical="https://audiogretel.com/en/blog" alternateEs="https://audiogretel.com/blog" alternateEn="https://audiogretel.com/en/blog">
+  <h1 class="blog-page-title">{t.title}</h1>
+  <p class="blog-page-description">{t.description}</p>
+
+  <div class="blog-layout">
+    <div class="blog-list-wrap">
+      <div class="blog-list" id="blog-list-en" data-current-category="">
+        {posts.map((entry) => (
+          <BlogCard
+            slug={entry.slug}
+            title={entry.data.title}
+            excerpt={entry.data.excerpt}
+            date={entry.data.date}
+            author={entry.data.author}
+            category={entry.data.category}
+            featuredImage={entry.data.featuredImage}
+            baseUrl={baseUrl}
+            readingTime={3}
+          />
+        ))}
+      </div>
+      {totalPages > 1 && (
+        <nav class="blog-pagination" aria-label="Pagination">
+          {currentPage > 1 ? (
+            <a href={currentPage === 2 ? '/en/blog' : `/en/blog/${currentPage - 1}`}>{t.prev}</a>
+          ) : (
+            <span />
+          )}
+          <span>{t.page} {currentPage} / {totalPages}</span>
+          {currentPage < totalPages ? (
+            <a href={currentPage === 1 ? '/en/blog/2' : `/en/blog/${currentPage + 1}`}>{t.next}</a>
+          ) : (
+            <span />
+          )}
+        </nav>
+      )}
+    </div>
+    <BlogSidebar lang={lang} categories={categories} recentPosts={recentPosts} baseUrl={baseUrl} />
+  </div>
+
+  <script define:vars={{ postsForClient, t }}>
+    const listEl = document.getElementById('blog-list-en');
+    if (!listEl) return;
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (category) {
+      listEl.dataset.currentCategory = category;
+      const filtered = postsForClient.filter((p) => p.category === category);
+      if (filtered.length === 0) {
+        listEl.innerHTML = '<p class="blog-page-description">' + t.noPosts + '</p>';
+      } else {
+        listEl.innerHTML = filtered.map((p) => {
+          const dateStr = new Date(p.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+          return `<article class="blog-card" data-category="${p.category}">
+            <a href="/en/blog/${p.slug}" class="blog-card-link">
+              <div class="blog-card-body">
+                <span class="blog-card-category">${p.category}</span>
+                <h2 class="blog-card-title">${p.title}</h2>
+                <p class="blog-card-excerpt">${p.excerpt}</p>
+                <footer class="blog-card-meta"><span class="blog-card-date">${dateStr}</span></footer>
+              </div>
+            </a>
+          </article>`;
+        }).join('');
+      }
+    }
+  </script>
+</BaseLayout>

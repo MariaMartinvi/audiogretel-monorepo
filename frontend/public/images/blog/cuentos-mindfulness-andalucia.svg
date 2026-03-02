@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg4" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#e07a5f"/>
+      <stop offset="100%" style="stop-color:#c56b52"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  <circle cx="400" cy="225" r="100" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="400" cy="225" r="60" fill="rgba(255,255,255,0.1)"/>
+  <text x="400" y="215" font-family="system-ui,sans-serif" font-size="26" font-weight="600" fill="white" text-anchor="middle">Mindfulness</text>
+  <text x="400" y="250" font-family="system-ui,sans-serif" font-size="17" fill="rgba(255,255,255,0.95)" text-anchor="middle">Cuentos en Andalucía</text>
+</svg>

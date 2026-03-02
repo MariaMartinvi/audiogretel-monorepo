@@ -1,0 +1,9 @@
+# Legacy blog IDs -> slug (optional; meta refresh already in place)
+/blog/post/1    /blog/aprendizaje-temprano-idiomas/   301
+/blog/post/2    /blog/rutina-cuentos-dormir/          301
+/blog/post/3    /blog/cuentos-transformaron-familia/  301
+/blog/post/4    /blog/cuentos-mindfulness-andalucia/  301
+/en/blog/post/1 /en/blog/aprendizaje-temprano-idiomas/   301
+/en/blog/post/2 /en/blog/rutina-cuentos-dormir/          301
+/en/blog/post/3 /en/blog/cuentos-transformaron-familia/  301
+/en/blog/post/4 /en/blog/cuentos-mindfulness-andalucia/  301

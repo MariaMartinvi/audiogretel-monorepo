@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+
+Sitemap: https://audiogretel.com/sitemap.xml
+Sitemap: https://audiogretel.com/dynamic-sitemap.xml

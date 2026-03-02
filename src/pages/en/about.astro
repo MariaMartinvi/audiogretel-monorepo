@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ui } from '../../i18n/ui';
+
+const t = ui.en;
+---
+
+<BaseLayout lang="en" title={t.about.title} description={t.about.description}>
+  <h1>About us</h1>
+  <p>Meet the team and mission of AudioGretel.</p>
+</BaseLayout>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Cross-Origin Policies para Firebase Auth y servicios externos -->
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="unsafe-none">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="unsafe-none">
+    
+    <!-- Primary Meta Tags -->
+    <title>AudioGretel - Cuentos para niños y audiocuentos personalizados</title>
+    <meta name="title" content="AudioGretel - Cuentos para niños y audiocuentos personalizados">
+    <meta name="description" content="Genera cuentos personalizados para niños y aprende idiomas mientras duermen. Audiocuentos en inglés y español con diferentes voces y acentos. ¡Perfecto para aprender idiomas con cuentos!">
+    <meta name="keywords" content="cuentos para niños, aprender idiomas con cuentos, audiocuentos personalizados, cuentos para dormir, historias infantiles en inglés, cuentos en español, cuentos personalizados, cuentos infantiles, aprender inglés con cuentos, cuentos para aprender idiomas">
+    <meta name="author" content="AudioGretel">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#2d3a5f">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://audiogretel.com">
+    <meta property="og:title" content="AudioGretel - Cuentos para niños y audiocuentos personalizados">
+    <meta property="og:description" content="Genera cuentos personalizados para niños y aprende idiomas mientras duermen. Audiocuentos en inglés y español con diferentes voces y acentos.">
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="AudioGretel">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AudioGretel - Cuentos para niños y audiocuentos personalizados">
+    <meta name="twitter:description" content="Genera cuentos personalizados para niños y aprende idiomas mientras duermen. Audiocuentos en inglés y español con diferentes voces y acentos.">
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="%PUBLIC_URL%/logo-moon.svg" type="image/svg+xml">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo-moon.svg">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AudioGretel",
+        "url": "https://audiogretel.com",
+        "logo": "https://audiogretel.com/logo512.png",
+        "description": "Plataforma de cuentos personalizados para niños y audiocuentos para aprender idiomas",
+        "sameAs": [
+          "https://tiktok.com/@audiogretel",
+          "https://instagram.com/audiogretel"
+        ]
+      }
+    </script>
+
+    <!-- Structured Data - WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AudioGretel",
+        "url": "https://audiogretel.com",
+        "description": "Genera cuentos personalizados para niños y aprende idiomas mientras duermen. Audiocuentos en inglés y español con diferentes voces y acentos.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://audiogretel.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Structured Data - Product -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "AudioGretel Premium",
+        "description": "Suscripción premium para generar cuentos personalizados y audiocuentos para niños",
+        "image": "https://audiogretel.com/og-image.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "AudioGretel"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "5.00",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://audiogretel.com/subscribe",
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ES",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 14,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "EUR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 0,
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 0,
+                "maxValue": 0,
+                "unitCode": "DAY"
+              }
+            }
+          }
+        },
+        "category": "Software",
+        "sku": "audiogretel-premium",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "150"
+        }
+      }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8916688102365664"
+    crossorigin="anonymous"></script>
+
+    <!-- Stripe Payment -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WFPW93RS');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFPW93RS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+  </body>
+</html>
+

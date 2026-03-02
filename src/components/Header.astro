@@ -1,0 +1,43 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = lang === 'en' ? '/en' : '';
+const main = ''; // mismo origen; si el blog está en subdominio, usar 'https://audiogretel.com'
+
+const navItems = [
+  { href: main + '/aprender-ingles', label: t.nav.learnEnglish },
+  { href: main + '/ejemplos', label: t.nav.library },
+  { href: main + '/crear-cuento', label: t.nav.createStory },
+  { href: base ? `${base}/blog` : '/blog', label: t.nav.blog },
+];
+---
+
+<header class="navbar navbar-astro">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <a href={main || base || '/'} class="logo">
+        <img src="/luna-gordita.svg" alt="AudioGretel" class="logo-image" width="55" height="55" />
+        <span class="logo-text">AudioGretel</span>
+      </a>
+      <nav class="nav-links-center desktop-only" aria-label="Principal">
+        {navItems.map((item) => (
+          <a href={item.href} class="nav-link">{item.label}</a>
+        ))}
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href={base || '/'} class="nav-link">{t.nav.home}</a>
+      <a href={base ? `${base}/contact` : '/contact'} class="nav-link">{t.nav.contact}</a>
+      <div class="lang-switcher">
+        <a href={Astro.url.pathname.replace(/^\/en/, '') || '/'} class={lang === 'es' ? 'lang-active' : ''} aria-current={lang === 'es' ? 'page' : undefined}>ES</a>
+        <a href={lang === 'en' ? Astro.url.pathname : `/en${Astro.url.pathname === '/' ? '' : Astro.url.pathname}`} class={lang === 'en' ? 'lang-active' : ''} aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
+      </div>
+    </div>
+  </div>
+</header>

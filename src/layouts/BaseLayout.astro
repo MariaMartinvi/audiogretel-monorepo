@@ -1,0 +1,54 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang?: Lang;
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  alternateEn?: string;
+  alternateEs?: string;
+}
+
+const { lang = 'es', title, description, canonical, ogImage, alternateEn, alternateEs } = Astro.props;
+const site = 'https://audiogretel.com';
+const canonicalUrl = canonical ?? `${site}${Astro.url.pathname.replace(/\/$/, '') || '/'}`;
+const ogImageUrl = ogImage?.startsWith('http') ? ogImage : ogImage ? `${site}${ogImage}` : `${site}/luna-gordita.svg`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description ?? title} />
+    <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description ?? title} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description ?? title} />
+    {alternateEs && <link rel="alternate" hreflang="es" href={alternateEs} />}
+    {alternateEn && <link rel="alternate" hreflang="en" href={alternateEn} />}
+    {(alternateEs || alternateEn) && <link rel="alternate" hreflang="x-default" href={alternateEs ?? alternateEn} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main class="main-content">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

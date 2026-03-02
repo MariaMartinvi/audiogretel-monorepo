@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="95" fill="#2d3a5f" opacity="0.15"/>
+  <defs>
+    <mask id="crescentMask">
+      <circle cx="100" cy="100" r="80" fill="white"/>
+      <circle cx="155" cy="100" r="70" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#crescentMask)">
+    <circle cx="100" cy="100" r="80" fill="#e8d8ff" stroke="#4a3a6a" stroke-width="6"/>
+    <circle cx="65" cy="65" r="12" fill="#d8c8f8" opacity="0.5"/>
+    <circle cx="75" cy="135" r="10" fill="#c8b8e8" opacity="0.4"/>
+    <circle cx="85" cy="85" r="8" fill="#d8c8f8" opacity="0.5"/>
+    <ellipse cx="65" cy="75" rx="14" ry="18" fill="#4a3a6a"/>
+    <circle cx="65" cy="71" r="7" fill="#ffffff"><animate attributeName="cy" values="71;73;71" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="68" cy="69" r="3.5" fill="#80deea" opacity="0.9"/>
+    <ellipse cx="105" cy="75" rx="14" ry="18" fill="#4a3a6a"/>
+    <circle cx="105" cy="71" r="7" fill="#ffffff"><animate attributeName="cy" values="71;73;71" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="108" cy="69" r="3.5" fill="#80deea" opacity="0.9"/>
+    <ellipse cx="112" cy="93" rx="9" ry="13" fill="#f0e8ff" stroke="#4a3a6a" stroke-width="2.5"/>
+    <ellipse cx="45" cy="92" rx="18" ry="12" fill="#ff8fab" opacity="0.6"/>
+    <ellipse cx="125" cy="92" rx="18" ry="12" fill="#ff8fab" opacity="0.6"/>
+    <path d="M 55 108 Q 85 136 115 108" fill="none" stroke="#4a3a6a" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g mask="url(#crescentMask)">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#4a3a6a" stroke-width="6"/>
+  </g>
+  <g transform="translate(155, 48)">
+    <polygon points="0,-24 7,-9 23,-9 10,2 17,17 0,9 -17,17 -10,2 -23,-9 -7,-9" fill="#ffd54f" stroke="#d4a574" stroke-width="3">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="10s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  <circle cx="35" cy="42" r="5" fill="#80deea"/>
+  <circle cx="172" cy="138" r="5" fill="#ff8fab"/>
+</svg>

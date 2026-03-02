@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d6a4f"/>
+      <stop offset="100%" style="stop-color:#40916c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg3)"/>
+  <circle cx="150" cy="200" r="70" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="650" cy="250" r="90" fill="rgba(255,255,255,0.1)"/>
+  <text x="400" y="210" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="white" text-anchor="middle">Familia</text>
+  <text x="400" y="248" font-family="system-ui,sans-serif" font-size="17" fill="rgba(255,255,255,0.9)" text-anchor="middle">Cuentos que transforman</text>
+</svg>

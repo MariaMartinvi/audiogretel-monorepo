@@ -1,0 +1,32 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{filtered.length > 0 && (
+  <nav class="post-toc" aria-label="Tabla de contenidos">
+    <h3 class="post-toc-title">En esta página</h3>
+    <ul class="post-toc-list">
+      {filtered.map((h) => (
+        <li class={`post-toc-item post-toc-h${h.depth}`}>
+          <a href={`#${h.slug}`}>{h.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .post-toc { position: sticky; top: 5rem; padding: 1rem; border-left: 3px solid var(--color-primary); background: #f8f9fa; border-radius: 0 8px 8px 0; }
+  .post-toc-title { font-size: 0.9rem; font-weight: 600; margin: 0 0 0.75rem; }
+  .post-toc-list { list-style: none; margin: 0; padding: 0; }
+  .post-toc-item { margin-bottom: 0.35rem; }
+  .post-toc-item a { font-size: 0.9rem; color: var(--color-text-muted); }
+  .post-toc-h3 { padding-left: 1rem; }
+</style>

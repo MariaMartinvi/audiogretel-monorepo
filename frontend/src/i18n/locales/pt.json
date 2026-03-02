@@ -1,0 +1,156 @@
+{
+  "subscription": {
+    "title": "Assinatura Premium",
+    "planTitle": "Plano Premium",
+    "premium": {
+      "title": "Plano Premium",
+      "features": {
+        "0": "30 histórias por mês",
+        "1": "Histórias ilimitadas",
+        "2": "Cancele quando quiser",
+        "3": "Acesso a todas as funcionalidades",
+        "4": "Suporte prioritário"
+      }
+    },
+    "planDescription": "Desbloqueie todas as funcionalidades com nosso plano premium",
+    "features": {
+      "stories": "30 histórias por mês",
+      "unlimited": "Histórias ilimitadas",
+      "cancel": "Cancele quando quiser"
+    },
+    "subscribe": "Assine por 5€/mês",
+    "processing": "Processando...",
+    "alreadySubscribed": "Você já está assinado!",
+    "redirecting": "Redirecionando...",
+    "cancelNote": "Você pode cancelar sua assinatura a qualquer momento através do seu perfil, acessível pelo menu superior.",
+    "cancelInfo": "Sua assinatura permanecerá ativa até o final do período de faturamento atual",
+    "subscribeButton": "Plano Premium",
+    "paymentInfo": "Pagamento seguro processado pelo Stripe. Não armazenamos as informações do seu cartão."
+  },
+  "register": {
+    "title": "Criar uma conta",
+    "subtitle": "Junte-se à nossa comunidade de contadores de histórias",
+    "freeStoriesBanner": "🎁 3 histórias grátis ao se registrar",
+    "subscribeLater": "Você pode assinar mais tarde",
+    "or": "ou",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Digite seu e-mail",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "Digite sua senha",
+    "confirmPasswordLabel": "Confirmar senha",
+    "confirmPasswordPlaceholder": "Digite sua senha novamente",
+    "createAccount": "Criar conta",
+    "alreadyAccount": "Já tem uma conta?",
+    "login": "Entrar",
+    "signInWithGoogle": "Registrar com Google",
+    "passwordsDontMatch": "As senhas não coincidem",
+    "loading": "Processando...",
+    "passwordValidation": "A senha deve ter pelo menos 6 caracteres"
+  },
+  "forgotPassword": {
+    "title": "Recuperar senha",
+    "subtitle": "Não se preocupe, isso acontece. Digite seu email e enviaremos um link para redefinir sua senha.",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "seu@email.com",
+    "submitButton": "Enviar link de recuperação",
+    "sending": "Enviando...",
+    "emailSent": "Email enviado!",
+    "nextSteps": "E agora?",
+    "checkInbox": "📬 Verifique sua caixa de entrada",
+    "checkSpam": "📱 Verifique também sua pasta de spam",
+    "clickLink": "🔗 Clique no link no email",
+    "createPassword": "🔑 Crie sua nova senha",
+    "noEmail": "Não recebeu o email?",
+    "tryAgain": "Tentar novamente",
+    "rememberPassword": "Lembrou sua senha?",
+    "login": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "register": "Registrar",
+    "emailRequired": "Por favor, digite seu email",
+    "recoveryError": "Erro ao enviar email de recuperação",
+    "requestError": "Erro ao processar a solicitação"
+  },
+  "login": {
+    "title": "Entrar",
+    "subtitle": "Bem-vindo",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Digite seu email",
+    "passwordLabel": "Senha",
+    "passwordPlaceholder": "Digite sua senha",
+    "forgotPassword": "Esqueceu sua senha?",
+    "loginButton": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "register": "Registrar",
+    "signInWithGoogle": "Entrar com Google",
+    "or": "ou",
+    "loading": "Processando..."
+  },
+  "storyForm": {
+    "title": "Criar Sua História",
+    "topic": "Tópico da História",
+    "topicPlaceholder": "Digite um tópico para sua história...",
+    "generateButton": "Gerar História",
+    "loginRequired": "Por favor, faça login para gerar histórias",
+    "clickToLogin": "Clique aqui para fazer login",
+    "verifyEmail": "Verificar Email",
+    "emailVerificationRequired": "🔐 Você deve verificar seu email antes de criar histórias.",
+    "publishError": "Erro ao publicar a história",
+    "published": "Publicada",
+    "audioGenerationInProgress": "O áudio está sendo gerado. Se você sair agora, o progresso será perdido. Tem certeza?"
+  },
+  "firebaseErrors": {
+    "userNotFound": "Não existe uma conta com este endereço de email",
+    "invalidEmail": "O formato do email não é válido",
+    "tooManyRequests": "Muitas tentativas. Aguarde um momento antes de tentar novamente",
+    "expiredActionCode": "O link expirou. Solicite um novo",
+    "invalidActionCode": "O link não é válido ou já foi usado",
+    "weakPassword": "A senha é muito fraca. Deve ter pelo menos 6 caracteres",
+    "invalidCredential": "Email ou senha incorretos",
+    "wrongPassword": "A senha está incorreta",
+    "userDisabled": "Esta conta foi desabilitada",
+    "emailAlreadyInUse": "Já existe uma conta com este email",
+    "networkRequestFailed": "Erro de conexão. Verifique sua internet e tente novamente",
+    "internalError": "Erro interno do sistema. Tente novamente mais tarde",
+    "invalidLoginCredentials": "Credenciais de acesso incorretas",
+    "accountExistsWithDifferentCredential": "Já existe uma conta com este email usando um método diferente",
+    "credentialAlreadyInUse": "Esta credencial já está sendo usada por outra conta",
+    "operationNotAllowed": "Esta operação não é permitida",
+    "requiredRecentLogin": "Para sua segurança, você precisa fazer login novamente para realizar esta ação"
+  },
+  "appName": "AudioGretel",
+  "testimonials": {
+    "title": "O que dizem nossos usuários",
+    "subtitle": "Descubra como o AudioGretel está transformando a forma como as crianças aprendem e desfrutam das histórias",
+    "testimonial1": {
+      "name": "Juanjo Mena",
+      "role": "Pai de duas crianças",
+      "content": "O AudioGretel tem sido uma ferramenta incrível para meus filhos. Eles adoram ouvir suas próprias histórias personalizadas e melhoraram significativamente seu inglês enquanto se divertem."
+    },
+    "testimonial2": {
+      "name": "Montserrat Villaró",
+      "role": "Professora do ensino primário",
+      "content": "Como professora, valorizo muito a qualidade educacional do AudioGretel. A personalização das histórias e os diferentes níveis de idioma o tornam perfeito para a sala de aula."
+    },
+    "testimonial3": {
+      "name": "Gabriel Martín",
+      "role": "Professor infantil",
+      "content": "As audiohistórias personalizadas são uma excelente ferramenta para o desenvolvimento da linguagem. Meus alunos adoram criar suas próprias histórias e praticar a pronúncia."
+    }
+  },
+  "createStoryPage": {
+    "title": "✨ Crie Sua História Personalizada",
+    "subtitle": "Preencha o formulário e gere uma história em áudio única em segundos"
+  },
+  "learnEnglish": {
+    "pageTitle": "Aprenda Inglês com Histórias em Áudio",
+    "pageSubtitle": "Os Cinco da Terra • 3 histórias por semana • Aventuras espaciais",
+    "methodologyProgressiveTitle": "Método Progressivo",
+    "methodologyProgressiveText": "Baseado em ouvir uma série de histórias em áudio contendo vocabulário e estruturas apropriadas para cada semana de aprendizagem.",
+    "methodologyNaturalTitle": "Aprendizagem Natural",
+    "methodologyNaturalText": "A ciência provou que as crianças aprendem um idioma ouvindo histórias. Aproveitamos a hora de dormir para ouvir histórias dos Cinco da Terra e melhorar suas habilidades em inglês.",
+    "methodologyAgesTitle": "Idades 4-7 anos",
+    "methodologyAgesText": "Perfeito para crianças entre 4 e 7 anos para complementar o inglês que aprendem na escola. Cada história em áudio começa com um resumo do vocabulário que aprenderemos na história."
+  },
+  "navbar": {
+  }
+} 

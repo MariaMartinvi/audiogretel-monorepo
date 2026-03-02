@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { ui } from '../../../../i18n/ui';
+import PostTOC from '../../../../components/blog/PostTOC.astro';
+import Breadcrumbs from '../../../../components/blog/Breadcrumbs.astro';
+import RelatedPosts from '../../../../components/blog/RelatedPosts.astro';
+import PostCTA from '../../../../components/blog/PostCTA.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blogEn');
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect('/en/blog');
+
+const lang = 'en';
+const baseUrl = '/en';
+const t = ui[lang].blog;
+
+const entry = await getEntry('blogEn', slug);
+if (!entry) return Astro.redirect('/en/blog');
+
+const { Content, headings } = await entry.render();
+const allPosts = await getCollection('blogEn');
+const sorted = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const related = sorted
+  .filter((p) => p.slug !== slug && p.data.category === entry.data.category)
+  .slice(0, 3)
+  .map((p) => ({ slug: p.slug, title: p.data.title }));
+
+const breadcrumbs = [
+  { label: t.breadcrumbHome, href: baseUrl },
+  { label: t.breadcrumbBlog, href: `${baseUrl}/blog` },
+  { label: entry.data.title, href: '' },
+];
+
+const formattedDate = entry.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+const readingTime = Math.max(1, Math.ceil((entry.body?.split(/\s+/).length ?? 0) / 200));
+---
+
+<BaseLayout lang={lang} title={entry.data.metaTitle} description={entry.data.metaDescription} canonical={`https://audiogretel.com/en/blog/${slug}/`} ogImage={entry.data.featuredImage} alternateEs={`https://audiogretel.com/blog/${slug}/`} alternateEn={`https://audiogretel.com/en/blog/${slug}/`}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: entry.data.title,
+    description: entry.data.metaDescription,
+    image: entry.data.featuredImage.startsWith('http') ? entry.data.featuredImage : `https://audiogretel.com${entry.data.featuredImage}`,
+    datePublished: entry.data.date.toISOString(),
+    author: { '@type': 'Organization', name: entry.data.author },
+  })} />
+  <article class="post-page">
+    <Breadcrumbs items={breadcrumbs} />
+    <header class="post-header">
+      <h1 class="post-title">{entry.data.title}</h1>
+      <div class="post-meta">
+        <span>{entry.data.author}</span>
+        <time datetime={entry.data.date.toISOString()}>{formattedDate}</time>
+        <span>{readingTime} {t.minRead}</span>
+      </div>
+    </header>
+    <div class="post-featured-image">
+      <img src={entry.data.featuredImage} alt="" width="800" height="450" onerror="this.src='/images/blog/placeholder.svg'" />
+    </div>
+    <div class="post-layout">
+      <div class="post-content">
+        <Content />
+      </div>
+      <aside class="post-sidebar">
+        <PostTOC headings={headings} />
+      </aside>
+    </div>
+    <RelatedPosts posts={related} baseUrl={baseUrl} title={t.relatedPosts} />
+    <PostCTA lang={lang} />
+  </article>
+</BaseLayout>
+
+<style>
+  .post-page { max-width: 900px; margin: 0 auto; }
+  .post-header { margin-bottom: 1.5rem; }
+  .post-title { font-size: 1.75rem; margin: 0 0 0.5rem; }
+  .post-meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; color: var(--color-text-muted); }
+  .post-featured-image { margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; }
+  .post-featured-image img { width: 100%; height: auto; display: block; }
+  .post-layout { display: grid; grid-template-columns: 1fr 220px; gap: 2rem; }
+  @media (max-width: 768px) { .post-layout { grid-template-columns: 1fr; } }
+  .post-content :global(h2) { margin-top: 1.5rem; }
+  .post-content :global(h2):first-of-type { margin-top: 0; }
+  .post-content :global(img) { max-width: 100%; }
+</style>

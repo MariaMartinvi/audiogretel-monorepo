@@ -1,0 +1,105 @@
+---
+import type { Lang } from '../../i18n/ui';
+import { ui } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  categories: string[];
+  recentPosts: { slug: string; title: string }[];
+  baseUrl: string;
+}
+
+const { lang, categories, recentPosts, baseUrl } = Astro.props;
+const t = ui[lang].blog;
+---
+
+<aside class="blog-sidebar" aria-label="Sidebar">
+  <div class="blog-sidebar-section">
+    <h3 class="blog-sidebar-title">{t.search}</h3>
+    <form class="blog-sidebar-search" role="search" id="blog-search-form">
+      <label for="blog-search-input" class="visually-hidden">{t.search}</label>
+      <input
+        type="search"
+        id="blog-search-input"
+        name="q"
+        placeholder={t.searchPlaceholder}
+        class="blog-sidebar-input"
+        autocomplete="off"
+      />
+    </form>
+  </div>
+  <div class="blog-sidebar-section">
+    <h3 class="blog-sidebar-title">{t.categories}</h3>
+    <ul class="blog-sidebar-list">
+      {categories.map((cat) => (
+        <li>
+          <a href={`${baseUrl}/blog?category=${encodeURIComponent(cat)}`} class="blog-sidebar-link">{cat}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="blog-sidebar-section">
+    <h3 class="blog-sidebar-title">{t.recent}</h3>
+    <ul class="blog-sidebar-list">
+      {recentPosts.map((p) => (
+        <li>
+          <a href={`${baseUrl}/blog/${p.slug}`} class="blog-sidebar-link">{p.title}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</aside>
+
+<style>
+  .blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .blog-sidebar-section {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border, #e9ecef);
+  }
+  .blog-sidebar-section:last-child {
+    border-bottom: none;
+  }
+  .blog-sidebar-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: var(--color-text, #333);
+  }
+  .blog-sidebar-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border, #e9ecef);
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .blog-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .blog-sidebar-list li {
+    margin-bottom: 0.5rem;
+  }
+  .blog-sidebar-link {
+    color: var(--color-text-muted, #666);
+    font-size: 0.9rem;
+  }
+  .blog-sidebar-link:hover {
+    color: var(--color-primary, #4361ee);
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = lang === 'en' ? '/en' : '';
+
+const footerLinks = [
+  { href: `${base}/como-funciona`, label: t.footer.howItWorks },
+  { href: `${base}/about`, label: t.nav.aboutUs },
+  { href: `${base}/ejemplos`, label: t.footer.storyExamples },
+  { href: `${base}/blog`, label: t.nav.blog },
+  { href: `${base}/contact`, label: t.nav.contact },
+  { href: `${base}/terminos`, label: t.nav.terms },
+  { href: `${base}/politica`, label: t.nav.privacy },
+];
+---
+
+<footer class="footer footer-astro">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>{t.footer.title}</h3>
+        <p>{t.footer.description}</p>
+        <div class="footer-logo" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="16" fill="#4361ee"/>
+            <path d="M20 25H60M20 40H60M20 55H40" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="50" cy="55" r="5" fill="white"/>
+          </svg>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>{t.footer.quickLinks}</h3>
+        <ul class="footer-links">
+          {footerLinks.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>{t.footer.followUs}</h3>
+        <div class="social-links">
+          <a href="https://tiktok.com/@micuentacuentos" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">TikTok</a>
+          <a href="https://instagram.com/audiogretel_" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>{t.footer.copyright}</p>
+      <p>{t.footer.madeWith} <span class="heart">❤️</span> {t.footer.inBarcelona}</p>
+    </div>
+  </div>
+</footer>

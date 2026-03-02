@@ -1,0 +1,50 @@
+---
+import type { Lang } from '../../i18n/ui';
+import { ui } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang].blog;
+const baseUrl = lang === 'en' ? '/en' : '';
+---
+
+<section class="post-cta">
+  <h2 class="post-cta-title">{t.ctaTitle}</h2>
+  <p class="post-cta-description">{t.ctaDescription}</p>
+  <a href={`${baseUrl}/contact`} class="post-cta-button">{t.ctaButton}</a>
+</section>
+
+<style>
+  .post-cta {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+  }
+  .post-cta-description {
+    margin: 0 0 1rem;
+    opacity: 0.95;
+    font-size: 0.95rem;
+  }
+  .post-cta-button {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    background: white;
+    color: #4361ee;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  .post-cta-button:hover {
+    opacity: 0.95;
+    text-decoration: none;
+  }
+</style>
