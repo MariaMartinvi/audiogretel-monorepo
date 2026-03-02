@@ -3,9 +3,9 @@ const isMobile = window.Capacitor !== undefined;
 
 // Configuración global
 const config = {
-  apiUrl: process.env.NODE_ENV === 'development' 
+  apiUrl: process.env.REACT_APP_API_URL || (process.env.NODE_ENV === 'development' 
     ? 'http://localhost:5001'
-    : 'https://generadorcuentos.onrender.com',
+    : 'https://generadorcuentos.onrender.com'),
   isMobile: isMobile,
   isProduction: process.env.NODE_ENV === 'production'
 };

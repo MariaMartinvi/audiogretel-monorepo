@@ -5,12 +5,12 @@ const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/User');
 
-// This would normally come from your User model
+// Usuarios de prueba solo para desarrollo; en producción se usa DB + Google OAuth
 const users = [
   {
     id: '1',
     email: 'test@example.com',
-    password: 'password123', // In a real app, this should be hashed
+    password: process.env.LOCAL_TEST_PASSWORD || '(no usar en producción)',
     name: 'Test User'
   }
 ];
@@ -18,7 +18,7 @@ const users = [
 // JWT strategy for token authentication
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: process.env.JWT_SECRET || 'your-secret-key-for-development' // Always use environment variables in production
+  secretOrKey: process.env.JWT_SECRET || (process.env.NODE_ENV === 'production' ? (() => { throw new Error('JWT_SECRET is required in production'); })() : 'dev-only-fallback')
 };
 
 passport.use(new JwtStrategy(jwtOptions, (jwt_payload, done) => {

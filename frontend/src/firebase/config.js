@@ -4,17 +4,15 @@ import { getFirestore, enableIndexedDbPersistence, collection, getDocs, limit, q
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 import { getStorage, connectStorageEmulator, ref, getDownloadURL } from "firebase/storage";
 
-// Configuración de Firebase usando variables de entorno
+// Configuración de Firebase desde variables de entorno (nunca hardcodear claves)
 const firebaseConfig = {
-  apiKey: "AIzaSyBDyWnyjvbATMRUzQFDk-pRndkKZKREw9o",
-  authDomain: "cuentacuentos-b2e64.firebaseapp.com",
-  projectId: "cuentacuentos-b2e64",
-  storageBucket: "cuentacuentos-b2e64.firebasestorage.app",
-  messagingSenderId: "8183103149",
-  appId: "1:8183103149:web:7e57b742d64996bd78d024"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
-
-console.log('🔥 Firebase Config (hardcoded for testing):', firebaseConfig);
 
 // Debug: Log configuration to check if variables are loaded
 console.log('🔥 Firebase Config Debug:', {
@@ -28,9 +26,6 @@ console.log('🔥 Firebase Config Debug:', {
 
 // Verificar que las variables de entorno estén definidas
 const checkEnvVariables = () => {
-  // Temporarily disabled for hardcoded testing
-  return true;
-  
   const requiredVars = [
     'REACT_APP_FIREBASE_API_KEY',
     'REACT_APP_FIREBASE_AUTH_DOMAIN',
