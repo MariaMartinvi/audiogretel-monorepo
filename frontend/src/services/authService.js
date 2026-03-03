@@ -28,6 +28,11 @@ let userCache = {
   CACHE_DURATION: 5000 // 5 segundos
 };
 
+/** Invalidar caché para forzar lectura fresca de Firestore (p. ej. tras pago Stripe). */
+export const invalidateUserCache = () => {
+  userCache = { data: null, timestamp: null };
+};
+
 // Configure axios defaults
 const axiosInstance = axios.create({
   baseURL: API_URL,

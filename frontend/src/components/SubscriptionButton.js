@@ -1,17 +1,28 @@
 import React from 'react';
 import axios from 'axios';
 import { loadStripe } from '@stripe/stripe-js';
+import { useAuth } from '../contexts/AuthContext';
 
 const stripePromise = loadStripe('pk_test_51RHQND2VwHWYt9L3y3Sh7y6UZ3Cwr4E5M1yNLLkby7g8M6VRsECRTzz9kEtQQEFXbnvcP83l6H2QTkEoDiLs8itj00lkp4ysmv');
 
 const SubscriptionButton = ({ email, onError }) => {
+  const { user } = useAuth();
+
   const handleSubscribe = async () => {
     try {
-      console.log('Starting subscription process for email:', email);
-      
-      // Create checkout session
+      const effectiveEmail = email || user?.email;
+      const firebaseUid = user?.uid || user?.id;
+
+      console.log('Starting subscription process for email:', effectiveEmail, 'userId:', firebaseUid);
+
+      if (!effectiveEmail) {
+        throw new Error('User email is required. Please log in again.');
+      }
+
+      // Create checkout session, sending the Firebase UID so backend updates the correct Firestore doc
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/stripe/create-checkout-session`, {
-        email,
+        email: effectiveEmail,
+        userId: firebaseUid,
         successUrl: `${window.location.origin}/success`,
         cancelUrl: `${window.location.origin}/subscribe`
       });
@@ -55,4 +66,4 @@ const SubscriptionButton = ({ email, onError }) => {
   );
 };
 
-export default SubscriptionButton; 
+export default SubscriptionButton;

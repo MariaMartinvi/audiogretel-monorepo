@@ -1,11 +1,11 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const { admin, db } = require('../config/firebase');
 
-// Crear sesión de checkout
+// Crear sesión de checkout (si viene userId = Firebase UID, usamos ese doc para que success actualice el mismo que lee el frontend)
 const createCheckoutSession = async (req, res) => {
   try {
-    const { email } = req.body;
-    console.log('🔍 DEBUG CHECKOUT: Creando sesión para', email);
+    const { email, userId: firebaseUid } = req.body;
+    console.log('🔍 DEBUG CHECKOUT: Creando sesión para', email, 'userId:', firebaseUid);
     console.log('🔍 DEBUG CHECKOUT: Variables de entorno', {
       STRIPE_PRICE_ID: process.env.STRIPE_PRICE_ID,
       FRONTEND_URL: process.env.FRONTEND_URL
@@ -15,31 +15,54 @@ const createCheckoutSession = async (req, res) => {
       return res.status(400).json({ error: 'Email es requerido' });
     }
     
-    // Buscar usuario en Firestore
     const usersRef = db.collection('users');
-    const userQuery = await usersRef.where('email', '==', email).get();
-    
     let user;
     let userId;
     
-    if (userQuery.empty) {
-      console.log('🔍 DEBUG CHECKOUT: Usuario no encontrado, creando nuevo');
-      // Crear nuevo usuario en Firestore
-      const newUserData = {
-        email, 
-        subscriptionStatus: 'free',
-        storiesGenerated: 0,
-        monthlyStoriesGenerated: 0,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      };
-      const userDocRef = await usersRef.add(newUserData);
-      userId = userDocRef.id;
-      user = { id: userId, ...newUserData };
+    if (firebaseUid) {
+      // Usar el documento del usuario logueado (mismo que lee el frontend: users/{firebaseUid})
+      const userRef = usersRef.doc(firebaseUid);
+      const userDoc = await userRef.get();
+      if (userDoc.exists) {
+        userId = firebaseUid;
+        user = { id: userId, ...userDoc.data() };
+      } else {
+        userId = firebaseUid;
+        const newUserData = {
+          email,
+          firebase_uid: firebaseUid,
+          subscriptionStatus: 'free',
+          storiesGenerated: 0,
+          monthlyStoriesGenerated: 0,
+          isPremium: false,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        };
+        await userRef.set(newUserData);
+        user = { id: userId, ...newUserData };
+      }
+      console.log('🔍 DEBUG CHECKOUT: Usando documento por UID', userId);
     } else {
-      const userDoc = userQuery.docs[0];
-      userId = userDoc.id;
-      user = { id: userId, ...userDoc.data() };
+      // Fallback: buscar por email (puede dar documento distinto al del frontend)
+      const userQuery = await usersRef.where('email', '==', email).get();
+      if (userQuery.empty) {
+        console.log('🔍 DEBUG CHECKOUT: Usuario no encontrado, creando nuevo');
+        const newUserData = {
+          email, 
+          subscriptionStatus: 'free',
+          storiesGenerated: 0,
+          monthlyStoriesGenerated: 0,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        };
+        const userDocRef = await usersRef.add(newUserData);
+        userId = userDocRef.id;
+        user = { id: userId, ...newUserData };
+      } else {
+        const userDoc = userQuery.docs[0];
+        userId = userDoc.id;
+        user = { id: userId, ...userDoc.data() };
+      }
     }
     
     // Crear sesión de checkout
@@ -152,8 +175,10 @@ const handleSuccess = async (req, res) => {
       message: 'Suscripción activada exitosamente',
       user: {
         id: userId,
+        uid: userId,
         email: userData.email,
         subscriptionStatus: 'active',
+        isPremium: true,
         ...updateData
       }
     });

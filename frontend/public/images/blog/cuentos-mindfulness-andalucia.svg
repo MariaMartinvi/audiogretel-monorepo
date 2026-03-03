@@ -9,5 +9,5 @@
   <circle cx="400" cy="225" r="100" fill="rgba(255,255,255,0.15)"/>
   <circle cx="400" cy="225" r="60" fill="rgba(255,255,255,0.1)"/>
   <text x="400" y="215" font-family="system-ui,sans-serif" font-size="26" font-weight="600" fill="white" text-anchor="middle">Mindfulness</text>
-  <text x="400" y="250" font-family="system-ui,sans-serif" font-size="17" fill="rgba(255,255,255,0.95)" text-anchor="middle">Cuentos en Andalucía</text>
+  <text x="400" y="250" font-family="system-ui,sans-serif" font-size="17" fill="rgba(255,255,255,0.95)" text-anchor="middle">Cuentos en Andalucï¿½a</text>
 </svg>

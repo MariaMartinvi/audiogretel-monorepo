@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../contexts/AuthContext';
+import { invalidateUserCache } from '../services/authService';
 import axios from 'axios';
 import './Success.css';
 
@@ -9,22 +10,25 @@ const Success = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
-  const { user, refreshUser } = useAuth();
+  const { user, refreshUser, setUser } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    let isMounted = true;
+
     const verifySubscription = async () => {
       const sessionId = new URLSearchParams(location.search).get('session_id');
-      
+
       if (!sessionId) {
-        setError(t('subscription.noSessionId'));
-        setLoading(false);
+        if (isMounted) {
+          setError(t('subscription.noSessionId'));
+          setLoading(false);
+        }
         return;
       }
 
       try {
-        console.log('Verifying subscription with session ID:', sessionId);
         const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5001';
         const response = await axios.get(`${apiUrl}/api/stripe/success`, {
           params: { session_id: sessionId },
@@ -34,37 +38,33 @@ const Success = () => {
           }
         });
 
-        console.log('Subscription verification response:', response.data);
-        
-        if (response.data.success) {
-          // Update local storage with new user data from backend
+        if (response.data.success && isMounted) {
           const updatedUser = response.data.user;
           localStorage.setItem('user', JSON.stringify(updatedUser));
-
-          // Refresh user data to get updated subscription status
-          await refreshUser();
+          if (setUser) setUser(updatedUser);
+          invalidateUserCache();
+          try {
+            await refreshUser();
+          } catch (e) {
+            if (e.name !== 'AbortError') throw e;
+          }
           setLoading(false);
-          
-          // Redirect after 3 seconds
-          setTimeout(() => {
-            navigate('/');
-          }, 3000);
-        } else {
+          setTimeout(() => navigate('/'), 3000);
+        } else if (!response.data.success) {
           throw new Error('Subscription verification failed');
         }
       } catch (err) {
-        console.error('Error verifying subscription:', err);
-        setError(t('subscription.verificationError') || 'Error verifying subscription');
-        setLoading(false);
+        if (err.name === 'AbortError') return;
+        if (isMounted) {
+          setError(t('subscription.verificationError') || 'Error verifying subscription');
+          setLoading(false);
+        }
       }
     };
 
     verifySubscription();
-  }, [location, navigate, t, refreshUser]);
-
-  if (!user) {
-    return null;
-  }
+    return () => { isMounted = false; };
+  }, [location, navigate, t, refreshUser, setUser]);
 
   return (
     <div className="success-container">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { createCheckoutSession, loadStripe } from '../services/subscriptionService';
+import { getCurrentUser } from '../services/authService';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from './SEO';
@@ -25,14 +26,23 @@ const Subscribe = () => {
     try {
       setLoading(true);
       setError(null);
-      
-      const userEmail = user?.data?.email || user?.email;
-      
-      if (!user || !userEmail) {
-        throw new Error('User email is required. Please log in again.');
+
+      let userEmail = user?.data?.email || user?.email;
+      let firebaseUid = user?.uid || user?.id || user?.data?.id;
+
+      // Fallback robusto: si no tenemos UID (caso de usuarios antiguos en localStorage),
+      // forzamos lectura fresca desde Firebase/AuthService
+      if (!firebaseUid || !userEmail) {
+        console.log('Subscribe: missing uid/email in context user, fetching from getCurrentUser()');
+        const freshUser = await getCurrentUser();
+        if (!freshUser) {
+          throw new Error('User email is required. Please log in again.');
+        }
+        userEmail = freshUser.email;
+        firebaseUid = freshUser.uid;
       }
 
-      const response = await createCheckoutSession(userEmail);
+      const response = await createCheckoutSession(userEmail, firebaseUid);
       
       if (response.url) {
         window.location.href = response.url;

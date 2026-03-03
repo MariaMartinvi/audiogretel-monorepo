@@ -1,15 +1,18 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAuth } from '../contexts/AuthContext';
 import { createCheckoutSession, loadStripe } from '../services/subscriptionService';
 
-const SubscriptionStatus = ({ status, storiesRemaining, email }) => {
+const SubscriptionStatus = ({ status, storiesRemaining, email, userId: propUserId }) => {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [isLoading, setIsLoading] = React.useState(false);
+  const firebaseUid = propUserId || user?.uid || user?.id || user?.data?.id;
 
   const handleSubscribe = async () => {
     try {
       setIsLoading(true);
-      const { sessionId } = await createCheckoutSession(email);
+      const { sessionId } = await createCheckoutSession(email, firebaseUid);
       const stripe = await loadStripe();
       await stripe.redirectToCheckout({ sessionId });
     } catch (error) {

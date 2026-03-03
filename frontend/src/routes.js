@@ -13,6 +13,7 @@ import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
 import Subscribe from './components/Subscribe';
 import Profile from './components/Profile';
+import Success from './components/Success';
 import AboutPage from './components/pages/AboutPage';
 import ServicesPage from './components/pages/ServicesPage';
 import ContactPage from './components/pages/ContactPage';
@@ -118,6 +119,8 @@ const AppRoutes = () => {
               <Profile />
             </PrivateRoute>
           } />
+          {/* Success page must be accessible even right after Stripe redirect, before auth state is restored */}
+          <Route path="/success" element={<Success />} />
           
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

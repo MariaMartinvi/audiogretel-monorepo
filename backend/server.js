@@ -69,7 +69,7 @@ const rateLimit = require('express-rate-limit');
 const storyRoutes = require('./routes/storyRoutes');
 // const authRoutes = require('./routes/authRoutes'); // Firebase Auth handled in frontend
 const stripeRoutes = require('./routes/stripeRoutes'); // Updated for Firebase
-// const subscriptionRoutes = require('./routes/subscriptionRoutes'); // Needs Firebase update
+const subscriptionRoutes = require('./routes/subscriptionRoutes');
 // const newsletterRoutes = require('./routes/newsletterRoutes'); // Needs Firebase update
 // const ratingsRoutes = require('./routes/ratingsRoutes'); // Needs Firebase update
 const audioRoutes = require('./routes/audioRoutes');
@@ -323,7 +323,7 @@ app.use('/api/learn-english', learnEnglishRoutes);
 console.log('Learn English routes registered');
 
 // Subscription routes - need to be updated for Firebase  
-// app.use('/api/subscription', subscriptionRoutes);
+app.use('/api/subscription', subscriptionRoutes);
 // console.log('Subscription routes registered');
 
 // Newsletter routes - need to be updated for Firebase

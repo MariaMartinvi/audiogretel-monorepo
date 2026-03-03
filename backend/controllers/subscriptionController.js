@@ -12,13 +12,39 @@ exports.cancelSubscription = async (req, res) => {
     }
 
     const userData = userDoc.data();
+    console.log('🔍 cancelSubscription: user data', {
+      email: userData.email,
+      stripeSubscriptionId: userData.stripeSubscriptionId,
+      stripeSubscriptionIdType: typeof userData.stripeSubscriptionId
+    });
 
     if (!userData.stripeSubscriptionId) {
       return res.status(400).json({ message: 'No active subscription found' });
     }
 
+    // Extract subscription ID (handle both string and object shapes from older data)
+    let subscriptionId = userData.stripeSubscriptionId;
+    if (typeof subscriptionId === 'object' && subscriptionId !== null) {
+      subscriptionId =
+        subscriptionId.id ||
+        subscriptionId.subscriptionId ||
+        subscriptionId.subscription?.id ||
+        null;
+    }
+
+    if (!subscriptionId || typeof subscriptionId !== 'string') {
+      console.error('❌ cancelSubscription: invalid stripeSubscriptionId shape', {
+        raw: userData.stripeSubscriptionId
+      });
+      return res.status(500).json({
+        message: 'Invalid subscription ID stored for user'
+      });
+    }
+
+    console.log('🔍 cancelSubscription: cancelling Stripe subscription', subscriptionId);
+
     // Cancel the subscription in Stripe
-    const subscription = await stripe.subscriptions.cancel(userData.stripeSubscriptionId);
+    const subscription = await stripe.subscriptions.cancel(subscriptionId);
 
     // Update user in Firestore
     await userRef.update({

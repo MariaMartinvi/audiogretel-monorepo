@@ -26,14 +26,15 @@ axiosInstance.interceptors.request.use(config => {
   return config;
 });
 
-// Create a checkout session
-export const createCheckoutSession = async (email) => {
+// Create a checkout session (userId = Firebase UID so backend updates the same doc the app uses)
+export const createCheckoutSession = async (email, userId = null) => {
   try {
     const requestData = {
       email,
       successUrl: `${window.location.origin}/success`,
       cancelUrl: `${window.location.origin}/subscribe`
     };
+    if (userId) requestData.userId = userId;
 
     const response = await axiosInstance.post('/api/stripe/create-checkout-session', requestData);
     
