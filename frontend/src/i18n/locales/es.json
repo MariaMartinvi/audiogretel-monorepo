@@ -929,7 +929,7 @@
     "wrongPassword": "La contraseña es incorrecta",
     "userDisabled": "Esta cuenta ha sido deshabilitada",
     "emailAlreadyInUse": "Ya existe una cuenta con este email",
-    "networkRequestFailed": "Error de conexión. Verifica tu internet e intenta de nuevo",
+    "networkRequestFailed": "Error de conexión con Firebase. Comprueba tu internet, desactiva VPN o bloqueadores, y en Firebase Console → Authentication → Authorized domains que esté este sitio (p. ej. localhost o tu dominio).",
     "internalError": "Error interno del sistema. Intenta de nuevo más tarde",
     "invalidLoginCredentials": "Credenciales de acceso incorrectas",
     "accountExistsWithDifferentCredential": "Ya existe una cuenta con este email usando un método diferente",

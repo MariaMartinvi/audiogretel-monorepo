@@ -1019,7 +1019,7 @@
     "wrongPassword": "Incorrect password",
     "userDisabled": "This account has been disabled",
     "emailAlreadyInUse": "An account already exists with this email",
-    "networkRequestFailed": "Connection error. Check your internet and try again",
+    "networkRequestFailed": "Connection error with Firebase. Check your internet, disable VPN or ad blockers, and in Firebase Console → Authentication → Authorized domains ensure this site is listed (e.g. localhost or your domain).",
     "internalError": "Internal system error. Please try again later",
     "invalidLoginCredentials": "Invalid login credentials",
     "accountExistsWithDifferentCredential": "An account already exists with this email using a different method",
