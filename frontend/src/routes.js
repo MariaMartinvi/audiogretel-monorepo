@@ -25,6 +25,7 @@ import BlogListPage from './components/pages/BlogListPage';
 import BlogPostPage from './components/pages/BlogPostPage';
 import ToolsPage from './components/pages/ToolsPage';
 import HowToGeneratePage from './components/pages/HowToGeneratePage';
+import SuccessStoryPage from './components/pages/SuccessStoryPage';
 import GoogleCallback from './components/GoogleCallback';
 import { useAuth } from './contexts/AuthContext';
 
@@ -83,6 +84,8 @@ const AppRoutes = () => {
           <Route path="/audiocuentos-personalizados-ninos" element={<ToolsPage />} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/post/:slugOrId" element={<BlogPostPage />} />
+          <Route path="/caso-exito" element={<SuccessStoryPage />} />
+          <Route path="/success-story" element={<SuccessStoryPage />} />
           <Route path="/auth/google/callback" element={<GoogleCallback />} />
           
           {/* Authentication Routes */}
