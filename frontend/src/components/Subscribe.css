@@ -34,7 +34,10 @@
 
 .plan-card:hover { transform: translateY(-5px); box-shadow: 0 14px 45px rgba(0,0,0,0.45); }
 
-.plan-badge {
+/* Badge "Recomendado" en las pricing cards — selector específico para no afectar otras páginas */
+.plan-card .plan-badge,
+.pricing-grid .plan-badge,
+.plans-grid .plan-badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
   background: #F4C842; color: #0D1B2A; border-radius: 9999px;
   padding: 0.25rem 1rem; font-size: 0.78rem; font-weight: 800;

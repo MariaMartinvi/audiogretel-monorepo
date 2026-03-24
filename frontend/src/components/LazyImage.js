@@ -8,8 +8,8 @@ const generatePlaceholder = (width = 400, height = 300) => {
     <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
       <defs>
         <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#f5f5f5;stop-opacity:1" />
+          <stop offset="0%" style="stop-color:#0f2035;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1a3050;stop-opacity:1" />
         </linearGradient>
       </defs>
       <rect width="${width}" height="${height}" fill="url(#grad)"/>

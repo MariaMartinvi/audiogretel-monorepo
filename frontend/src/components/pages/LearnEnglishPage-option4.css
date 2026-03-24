@@ -111,7 +111,13 @@
   font-weight: 600;
 }
 
-.plan-badge {
+/* Badge dentro del hero — anulamos el position:absolute del Subscribe.css */
+.learn-english-hero .plan-badge,
+.learn-english-hero-container .plan-badge {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
   display: inline-block;
   background: rgba(244,200,66,0.12);
   color: #F4C842;
@@ -120,13 +126,13 @@
   font-weight: 800;
   font-size: 1rem;
   border: 2px solid rgba(244,200,66,0.3);
-  transform: rotate(-1deg);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 14px rgba(244,200,66,0.12);
+  margin-top: 0.5rem;
 }
-.plan-badge:hover {
-  transform: rotate(1deg) scale(1.05);
-  background: rgba(244,200,66,0.18);
+.learn-english-hero .plan-badge:hover,
+.learn-english-hero-container .plan-badge:hover {
+  background: rgba(244,200,66,0.2);
   box-shadow: 0 6px 20px rgba(244,200,66,0.2);
 }
 

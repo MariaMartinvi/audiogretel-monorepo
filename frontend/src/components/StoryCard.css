@@ -27,19 +27,23 @@
   background: #0f2035;
   flex-shrink: 0;
 }
-.story-card-image-container img,
-.story-card-image-container .lazy-image {
-  width: 100%; height: 100%;
+
+/* LazyImage dentro del contenedor */
+.story-card-image-container .lazy-image,
+.story-card-image-container img {
+  width: 100%;
+  height: 185px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease, opacity 0.3s ease;
+  transition: transform 0.4s ease;
 }
-.story-card:hover .story-card-image-container img,
-.story-card:hover .story-card-image-container .lazy-image { transform: scale(1.05); }
+.story-card:hover .story-card-image-container .lazy-image,
+.story-card:hover .story-card-image-container img { transform: scale(1.05); }
 
+/* Skeleton mientras carga la URL de Firebase */
 .story-card-skeleton {
-  width: 100%; height: 100%;
-  background: linear-gradient(90deg, #0f2035 0%, #1E3A5F 50%, #0f2035 100%);
+  width: 100%; height: 185px;
+  background: linear-gradient(90deg, #0f2035 0%, #1a3050 50%, #0f2035 100%);
   background-size: 200% 100%;
   animation: skeletonShimmer 1.5s infinite;
 }
@@ -48,9 +52,10 @@
   100% { background-position: -200% 0; }
 }
 
+/* Fallback cuando no hay imagen */
 .story-card-image-fallback {
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, #0f2035, #1E3A5F);
+  width: 100%; height: 185px;
+  background: linear-gradient(135deg, #0f2035 0%, #1a3050 100%);
   display: flex; align-items: center; justify-content: center;
   font-size: 3.5rem;
 }

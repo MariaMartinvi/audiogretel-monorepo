@@ -149,8 +149,29 @@
     "methodologyNaturalTitle": "Aprendizagem Natural",
     "methodologyNaturalText": "A ciência provou que as crianças aprendem um idioma ouvindo histórias. Aproveitamos a hora de dormir para ouvir histórias dos Cinco da Terra e melhorar suas habilidades em inglês.",
     "methodologyAgesTitle": "Idades 4-7 anos",
-    "methodologyAgesText": "Perfeito para crianças entre 4 e 7 anos para complementar o inglês que aprendem na escola. Cada história em áudio começa com um resumo do vocabulário que aprenderemos na história."
+    "methodologyAgesText": "Perfeito para crianças entre 4 e 7 anos para complementar o inglês que aprendem na escola. Cada história em áudio começa com um resumo do vocabulário que aprenderemos na história.",
+    "month1Title": "Mês 1: Minha equipe e eu",
+    "month1Short": "Minha equipe e eu",
+    "month2": "Mês 2: Em breve",
+    "month3": "Mês 3: Em breve",
+    "monthPrefix": "Mês",
+    "monthVocabulary": "Vocabulário do mês",
+    "structures": "Estruturas",
+    "week": "Semana",
+    "stories": "histórias",
+    "vocabulary": "Vocabulário:",
+    "listen": "Ouvir",
+    "teamIntro": "Conheça Os Cinco da Terra: Sara (Espanha), María (Camarões), Eva (China), Robert (EUA) e Gabriel (Austrália). 5 adolescentes em missões espaciais secretas!",
+    "howItWorks": "Como funciona",
+    "introSection": "Introdução de vocabulário (espanhol→inglês) com voz americana",
+    "storySection": "Audiohistória completa em inglês com Os Cinco da Terra",
+    "formatInfo": "Formato: \"Madre... Mother... Mother... Mother...\" (espanhol primeiro, inglês 3 vezes)",
+    "missionInfo": "5 adolescentes de diferentes países em missões espaciais secretas",
+    "audioIntro": "Introdução",
+    "audioVocab": "Vocabulário",
+    "audioStory": "História",
+    "errorLoading": "Erro ao carregar o áudio. Por favor, tente novamente.",
+    "generating": "Gerando áudio da história..."
   },
-  "navbar": {
-  }
-} 
+  "navbar": {}
+}

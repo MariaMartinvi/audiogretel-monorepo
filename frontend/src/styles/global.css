@@ -212,6 +212,21 @@ button {
 .retry-button:hover { background: #DC2626; transform: translateY(-2px); }
 
 /* =============================================
+   LAZY IMAGE — evitar fondo gris en todo el sitio
+   ============================================= */
+.lazy-image {
+  background: #0f2035;
+  display: block;
+}
+.lazy-image.lazy-image--loading {
+  /* el blur/opacity lo gestiona el componente inline, solo aseguramos fondo oscuro */
+  background: #0f2035;
+}
+.lazy-image.lazy-image--error {
+  display: none; /* si falla, el padre muestra el fallback */
+}
+
+/* =============================================
    MISC
    ============================================= */
 .action-section { margin-bottom: 1.5rem; }

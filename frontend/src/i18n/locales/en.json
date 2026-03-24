@@ -89,11 +89,7 @@
   "subscription": {
     "title": "Premium Subscription",
     "planTitle": "Premium Plan",
-    "features": {
-      "stories": "30 stories per month",
-      "unlimited": "Unlimited stories",
-      "cancel": "Cancel anytime"
-    },
+    "features": "Features",
     "subscribe": "Subscribe for $5/month",
     "processing": "Processing...",
     "alreadySubscribed": "You are already subscribed!",
@@ -110,7 +106,7 @@
       "4": "Access to all premium features"
     },
     "subscribeButton": "Upgrade to Premium",
-    "paymentInfo": "Secure payment",
+    "paymentInfo": "Secure payment processed by Stripe. We do not store your card information.",
     "error": "Error processing subscription",
     "success": "Subscription successful!",
     "freeTitle": "Free Plan",
@@ -128,7 +124,6 @@
     "feature2": "Priority support",
     "feature3": "Access to all story types",
     "cancel": "Cancel Subscription",
-    "features": "Features",
     "unlimitedStories": "Unlimited stories",
     "prioritySupport": "Priority support",
     "earlyAccess": "Early access to new features",
@@ -150,8 +145,7 @@
         "4": "Access to all premium features"
       }
     },
-    "cancelInfo": "You can cancel your subscription at any time. Premium access will continue until the end of the paid period.",
-    "paymentInfo": "Secure payment processed by Stripe. We do not store your card information."
+    "cancelInfo": "You can cancel your subscription at any time. Premium access will continue until the end of the paid period."
   },
   "profile": {
     "title": "My Profile",
@@ -160,10 +154,9 @@
     "subscriptionStatus": "Subscription Status",
     "subscriptionFree": "Free Plan",
     "subscriptionActive": "Premium Plan Active",
-    "subscriptionCancelled": "Subscription Cancelled",
+    "subscriptionCancelled": "Subscription successfully cancelled",
     "cancelSubscription": "Cancel Subscription",
     "cancelling": "Cancelling...",
-    "subscriptionCancelled": "Subscription successfully cancelled",
     "cancelError": "Error cancelling subscription",
     "noActiveSubscription": "You don't have an active subscription",
     "storiesRemaining": "Stories Available",
@@ -203,10 +196,13 @@
     "title": "Explore our stories",
     "description": "Discover our collection of example stories for all ages",
     "storyCard": {
-      "protagonist": "Protagonist",
-      "ageRange": "years",
+      "recommendedAge": "Recommended age:",
+      "language": "Language:",
+      "level": "Level:",
       "readStory": "Read story",
-      "listenAudio": "Listen"
+      "listenAudio": "Listen",
+      "usingMockContent": "Using example content",
+      "protagonist": "Protagonist"
     },
     "filters": {
       "title": "Filter by:",
@@ -241,15 +237,6 @@
       "galician": "Galician",
       "basque": "Basque",
       "portuguese": "Portuguese"
-    },
-    "storyCard": {
-      "recommendedAge": "Recommended age:",
-      "language": "Language:",
-      "level": "Level:",
-      "readStory": "Read story",
-      "listenAudio": "Listen",
-      "usingMockContent": "Using example content",
-      "protagonist": "Protagonist"
     },
     "mockContent": {
       "badge": "Example",
@@ -778,7 +765,7 @@
     "searchPlaceholder": "Search the blog...",
     "recent": "Recent posts",
     "noPosts": "No posts in this category.",
-    "relatedPosts": "Related posts",
+    "relatedPosts": "Related Articles",
     "categories": {
       "benefits": "Benefits",
       "benefitsDesc": "Discover how our stories can benefit your child's development",
@@ -828,7 +815,16 @@
         "title": "Related Articles",
         "noRelated": "No related articles found"
       },
-      "tags": ["Education", "Language Learning", "Stories", "Tips", "Parenting", "Children", "Reading", "Development"],
+      "tags": [
+        "Education",
+        "Language Learning",
+        "Stories",
+        "Tips",
+        "Parenting",
+        "Children",
+        "Reading",
+        "Development"
+      ],
       "categories": {
         "title": "Categories",
         "benefits": "Benefits",
@@ -845,7 +841,11 @@
         "date": "2024-03-20",
         "category": "Benefits",
         "readingTime": "5 min read",
-        "tags": ["Education", "Language Learning", "Early Development"]
+        "tags": [
+          "Education",
+          "Language Learning",
+          "Early Development"
+        ]
       },
       "2": {
         "title": "Creating the Perfect Bedtime Story Routine",
@@ -854,7 +854,11 @@
         "date": "2024-03-18",
         "category": "Tips",
         "readingTime": "4 min read",
-        "tags": ["Parenting", "Bedtime", "Reading"]
+        "tags": [
+          "Parenting",
+          "Bedtime",
+          "Reading"
+        ]
       },
       "3": {
         "title": "How Stories Transformed Our Family's Language Journey",
@@ -863,7 +867,11 @@
         "date": "2024-03-15",
         "category": "Testimonials",
         "readingTime": "6 min read",
-        "tags": ["Success Story", "Family", "Language Learning"]
+        "tags": [
+          "Success Story",
+          "Family",
+          "Language Learning"
+        ]
       },
       "4": {
         "title": "Mindfulness stories for children: relaxation on Andalusia Day",
@@ -872,11 +880,15 @@
         "date": "2026-02-27",
         "category": "Tips",
         "readingTime": "7 min read",
-        "tags": ["Mindfulness", "Andalusia", "Emotional Education", "Audiostories"]
+        "tags": [
+          "Mindfulness",
+          "Andalusia",
+          "Emotional Education",
+          "Audiostories"
+        ]
       }
     },
-    "share": "Share this article",
-    "relatedPosts": "Related Articles"
+    "share": "Share this article"
   },
   "languages": {
     "title": "Language",
@@ -1050,6 +1062,28 @@
     "methodologyNaturalTitle": "Natural Learning",
     "methodologyNaturalText": "Science has proven that children learn a language by listening to stories. We take advantage of bedtime to listen to stories of The Five from Earth and improve their English skills.",
     "methodologyAgesTitle": "Ages 4-7",
-    "methodologyAgesText": "Perfect for children between 4 and 7 years old to complement the English they learn at school. Each audiobook starts with a summary of the vocabulary that we will learn in the story."
+    "methodologyAgesText": "Perfect for children between 4 and 7 years old to complement the English they learn at school. Each audiobook starts with a summary of the vocabulary that we will learn in the story.",
+    "month1Title": "Month 1: My Team and Me",
+    "month1Short": "My Team and Me",
+    "month2": "Month 2: Coming Soon",
+    "month3": "Month 3: Coming Soon",
+    "monthPrefix": "Month",
+    "monthVocabulary": "Month vocabulary",
+    "structures": "Structures",
+    "week": "Week",
+    "stories": "stories",
+    "vocabulary": "Vocabulary:",
+    "listen": "Listen",
+    "teamIntro": "Meet The Five from Earth: Sara (Spain), María (Cameroon), Eva (China), Robert (USA) and Gabriel (Australia). 5 teenagers on secret space missions!",
+    "howItWorks": "How it works",
+    "introSection": "Vocabulary introduction (Spanish→English) with American voice",
+    "storySection": "Full audio story in English starring The Five from Earth",
+    "formatInfo": "Format: \"Madre... Mother... Mother... Mother...\" (Spanish first, English 3 times)",
+    "missionInfo": "5 teenagers from different countries on secret space missions",
+    "audioIntro": "Introduction",
+    "audioVocab": "Vocabulary",
+    "audioStory": "Story",
+    "errorLoading": "Error loading audio. Please try again.",
+    "generating": "Generating audio story..."
   }
-} 
+}
