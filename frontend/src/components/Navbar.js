@@ -150,22 +150,25 @@ function Navbar() {
               {t('navbar.createStory')}
             </Link>
           </div>
+        </div>
 
-          {/* Mobile menu toggle - moved next to logo */}
+        <div className="nav-right">
+          {/* Hamburguesa a la derecha en móvil (desktop: oculto) */}
           <div className="mobile-menu-toggle" ref={mobileMenuRef}>
             <button
+              type="button"
               className={`hamburger-button ${isMobileMenuOpen ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
+              aria-label="Menu"
             >
               <span className="hamburger-line"></span>
               <span className="hamburger-line"></span>
               <span className="hamburger-line"></span>
             </button>
-            
-            {/* Mobile dropdown menu */}
+
             {isMobileMenuOpen && (
               <div className="mobile-dropdown">
-                {/* Learn English Link - always visible */}
                 <Link 
                   to="/aprender-ingles" 
                   onClick={() => { setIsMobileMenuOpen(false); scrollToTop(); }} 
@@ -174,7 +177,6 @@ function Navbar() {
                   {t('navbar.learnEnglish')}
                 </Link>
                 
-                {/* Library Link - always visible */}
                 <Link 
                   to="/ejemplos" 
                   onClick={handleLibraryClick} 
@@ -183,7 +185,6 @@ function Navbar() {
                   {t('navbar.library')}
                 </Link>
                 
-                {/* Create Story Link - always visible */}
                 <Link 
                   to="/crear-cuento" 
                   onClick={handleCreateStoryClick} 
@@ -270,7 +271,6 @@ function Navbar() {
                   </div>
                 )}
                 
-                {/* Language selector - mobile version inside hamburger */}
                 <div className="mobile-language-section">
                   <div className="mobile-language-label">{t('navbar.language')}</div>
                   <div className="mobile-language-grid">
@@ -288,9 +288,7 @@ function Navbar() {
               </div>
             )}
           </div>
-        </div>
 
-        <div className="nav-right">
           {/* Desktop navigation */}
           <div className="nav-links desktop-only">
             {user ? (
