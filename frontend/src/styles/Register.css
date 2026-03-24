@@ -1,16 +1,15 @@
-.password-hint {
-  margin-top: 0.5rem;
-  color: #666;
-  font-size: 0.875rem;
-}
+/* styles/Register.css — Noche Mágica (alias de components/Register.css) */
+/* La fuente de estilos principal está en components/Register.css */
+/* Este archivo sirve de override para cualquier clase específica de la ruta /register */
 
-.password-hint ul {
-  margin: 0.25rem 0 0 1.25rem;
-  padding: 0;
-  list-style-type: disc;
+.register-page, .register-container {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: #0D1B2A; padding: 2rem 1rem;
 }
-
-.password-hint li {
-  margin: 0.25rem 0;
-  line-height: 1.2;
-} 
+.register-card {
+  background: #132236; border-radius: 24px; padding: 2.5rem 2rem;
+  width: 100%; max-width: 440px;
+  border: 1px solid rgba(244,200,66,0.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}

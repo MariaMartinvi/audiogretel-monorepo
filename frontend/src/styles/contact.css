@@ -1,58 +1,19 @@
-.contact-page {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .contact-page h1 {
-    font-size: 2.5rem;
+/* contact.css — Noche Mágica */
+.contact-section { background: #0D1B2A; padding: 4rem 1.5rem; }
+.contact-inner { max-width: 900px; margin: 0 auto; }
 
-    text-align: center;
-    margin-bottom: 1rem;
-    color: white; /* Cambiar el color del texto a blanco */
-  }
-  
-  .contact-page p {
-    text-align: center;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .contact-form .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .contact-form button {
-    background-color: var(--primary);
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: var(--primary-dark);
-  }
+.contact-section h1, .contact-section h2 { font-family: 'Lora', Georgia, serif; color: #F9E08A; font-weight: 700; margin-bottom: 1rem; background: none; -webkit-text-fill-color: #F9E08A; }
+.contact-section h1 { font-size: 2.2rem; }
+.contact-section p { color: #A8BBCF; font-size: 0.95rem; line-height: 1.75; margin-bottom: 1rem; }
+
+.contact-form { background: #132236; border-radius: 20px; padding: 2.5rem 2rem; border: 1px solid rgba(244,200,66,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.contact-form label { color: #A8BBCF; font-size: 0.88rem; font-weight: 700; display: block; margin-bottom: 0.4rem; }
+.contact-form input, .contact-form textarea, .contact-form select { background: #0f2035; border: 1px solid rgba(184,204,228,0.15); border-radius: 10px; padding: 0.8rem 1rem; color: #EEF2F7; font-size: 0.95rem; font-family: 'Nunito', sans-serif; width: 100%; margin-bottom: 1.1rem; transition: border-color 0.2s, box-shadow 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: rgba(244,200,66,0.4); box-shadow: 0 0 0 3px rgba(244,200,66,0.08); }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #4a6480; }
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.contact-form button[type="submit"] { background: #F4C842; color: #0D1B2A; border: none; border-radius: 9999px; padding: 0.9rem 2rem; font-weight: 800; font-size: 1rem; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 14px rgba(244,200,66,0.2); }
+.contact-form button[type="submit"]:hover { background: #D4A82A; transform: translateY(-2px); }
+
+.success-msg { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-radius: 10px; padding: 0.75rem 1rem; color: #6EE7B7; font-size: 0.88rem; font-weight: 600; text-align: center; margin-bottom: 1rem; }
+.error-msg { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.25); border-radius: 10px; padding: 0.75rem 1rem; color: #FCA5A5; font-size: 0.88rem; font-weight: 600; text-align: center; margin-bottom: 1rem; }

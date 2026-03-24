@@ -1,80 +1,23 @@
-.subscription-success {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  padding: 2rem;
-  background-color: #f8f9fa;
+/* SubscriptionSuccess — Noche Mágica */
+.subscription-success-page { background: #0D1B2A; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1rem; }
+
+.subscription-success-card {
+  background: #132236; border-radius: 24px; padding: 3rem 2.5rem;
+  border: 1px solid rgba(244,200,66,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(244,200,66,0.06);
+  max-width: 520px; width: 100%; text-align: center;
 }
 
-.success-content {
-  text-align: center;
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
-}
+.subscription-success-card h1, .subscription-success-card h2 { font-family: 'Lora', Georgia, serif; color: #F9E08A; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; background: none; -webkit-text-fill-color: #F9E08A; }
+.subscription-success-card p { color: #A8BBCF; font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; }
+.subscription-success-icon { font-size: 4rem; margin-bottom: 1.5rem; display: block; animation: popIn 0.5s cubic-bezier(0.175,0.885,0.32,1.275); }
+@keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-.success-content h1 {
-  color: #28a745;
-  margin-bottom: 1.5rem;
+.subscription-success-card a, .subscription-success-card button {
+  display: inline-block; background: #F4C842; color: #0D1B2A; border: none;
+  border-radius: 9999px; padding: 0.9rem 2.5rem;
+  font-weight: 800; font-size: 1rem; cursor: pointer;
+  transition: all 0.25s ease; text-decoration: none; margin: 0.4rem;
+  box-shadow: 0 4px 14px rgba(244,200,66,0.2);
 }
-
-.success-content p {
-  color: #6c757d;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.success-content p:last-child {
-  font-style: italic;
-  font-size: 0.9rem;
-}
-
-.subscription-success-container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.subscription-success-container h1 {
-  color: #4CAF50;
-  margin-bottom: 1rem;
-}
-
-.subscription-success-container p {
-  color: #666;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-.countdown {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-  margin-top: 1rem;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-} 
+.subscription-success-card a:hover, .subscription-success-card button:hover { background: #D4A82A; transform: translateY(-2px); }

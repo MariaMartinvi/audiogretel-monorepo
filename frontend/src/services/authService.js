@@ -121,6 +121,11 @@ export const initAuthStateListener = () => {
     return;
   }
 
+  if (!auth) {
+    console.warn('⚠️ Firebase Auth no disponible: revisa la consola (p. ej. auth/invalid-api-key y restricciones del API key en Google Cloud).');
+    return;
+  }
+
   console.log('🔄 Initializing Firebase auth state listener...');
   
   onAuthStateChanged(auth, async (firebaseUser) => {

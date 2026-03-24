@@ -1,40 +1,13 @@
-.page-title {
-  font-size: 1.8rem; /* Reducido desde tu comentario "Smaller title" */
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 1.4rem; /* Reducido desde 1.6rem */
-  }
-}
-
-@media (max-width: 480px) {
-  .page-title {
-    font-size: 1.2rem; /* Reducido desde 1.4rem */
-  }
-}
-.section-title {
-  font-size: 1.4rem; /* Reducido desde tu comentario "Smaller section titles" */
-  font-weight: 600;
-  color: var(--primary-dark);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--light-gray);
-  padding-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.1rem; /* Reducido desde 1.3rem */
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1rem; /* Reducido desde 1.2rem */
-  }
-}
+/* terminos.css — Noche Mágica */
+.terminos-section, .terminos-page-content { background: #0D1B2A; padding: 4rem 1.5rem; min-height: 100vh; }
+.terminos-inner { max-width: 820px; margin: 0 auto; }
+.terminos-section h1, .terminos-section h2, .terminos-section h3 { font-family: 'Lora', Georgia, serif; color: #F9E08A; font-weight: 700; margin-bottom: 0.75rem; background: none; -webkit-text-fill-color: #F9E08A; }
+.terminos-section h1 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+.terminos-section h2 { font-size: 1.5rem; margin-top: 2.5rem; }
+.terminos-section h3 { font-size: 1.15rem; margin-top: 1.75rem; }
+.terminos-section p { color: #A8BBCF; font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+.terminos-section ul, .terminos-section ol { color: #A8BBCF; font-size: 0.95rem; line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1rem; }
+.terminos-section li { margin-bottom: 0.4rem; }
+.terminos-section strong { color: #EEF2F7; }
+.terminos-section a { color: #F4C842; font-weight: 600; }
+.terminos-section a:hover { color: #F9E08A; }

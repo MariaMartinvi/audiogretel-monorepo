@@ -93,39 +93,11 @@ function HomePage() {
             {/* 🎓 SECCIÓN 1: APRENDE INGLÉS */}
             <div className="section-card learn-card">
               <div className="section-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  {/* Estrellas de fondo */}
-                  <circle cx="15" cy="20" r="2" fill="#ffd54f" opacity="0.8">
-                    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="85" cy="25" r="1.5" fill="#80deea" opacity="0.7">
-                    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="20" cy="75" r="1.5" fill="#ff4081" opacity="0.6">
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
-                  </circle>
-                  
-                  {/* Libro abierto base */}
-                  <path d="M 25 50 L 25 75 L 50 78 L 75 75 L 75 50 L 50 53 Z" fill="#c8b8e8" stroke="#4a3a6a" strokeWidth="2"/>
-                  <line x1="50" y1="53" x2="50" y2="78" stroke="#4a3a6a" strokeWidth="2"/>
-                  
-                  {/* Páginas del libro */}
-                  <path d="M 28 55 L 47 57" stroke="#d8c8f8" strokeWidth="1" opacity="0.7"/>
-                  <path d="M 28 60 L 47 62" stroke="#d8c8f8" strokeWidth="1" opacity="0.7"/>
-                  <path d="M 53 57 L 72 55" stroke="#d8c8f8" strokeWidth="1" opacity="0.7"/>
-                  <path d="M 53 62 L 72 60" stroke="#d8c8f8" strokeWidth="1" opacity="0.7"/>
-                  
-                  {/* Gorro de graduación */}
-                  <rect x="35" y="35" width="30" height="8" fill="#a898c8" stroke="#4a3a6a" strokeWidth="2" rx="1"/>
-                  <path d="M 30 35 L 50 28 L 70 35 L 50 42 Z" fill="#b8a8d8" stroke="#4a3a6a" strokeWidth="2"/>
-                  
-                  {/* Borla dorada */}
-                  <line x1="65" y1="35" x2="72" y2="20" stroke="#d4a574" strokeWidth="2"/>
-                  <circle cx="72" cy="18" r="3" fill="#ffd700" stroke="#d4a574" strokeWidth="1.5"/>
-                  
-                  {/* Luna decorativa */}
-                  <circle cx="80" cy="15" r="6" fill="#e8d8ff" opacity="0.8"/>
-                  <circle cx="82" cy="15" r="5" fill="#c8b8e8" opacity="0.6"/>
+                {/* Gorro graduación */}
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 10l-10-5L2 10l10 5 10-5z" fill="#A78BFA" stroke="#A78BFA" strokeWidth="1.5" strokeLinejoin="round"/>
+                  <path d="M6 12.5v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round"/>
+                  <line x1="22" y1="10" x2="22" y2="16" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
               </div>
               <h3 className="section-title">{t('homepage.sections.learnEnglish.title')}</h3>
@@ -144,40 +116,12 @@ function HomePage() {
             {/* 📚 SECCIÓN 2: BIBLIOTECA */}
             <div className="section-card library-card">
               <div className="section-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  {/* Estrellas de fondo */}
-                  <polygon points="85,15 87,20 92,20 88,24 90,29 85,25 80,29 82,24 78,20 83,20" fill="#ffd54f" opacity="0.8">
-                    <animateTransform attributeName="transform" type="rotate" from="0 85 22" to="360 85 22" dur="4s" repeatCount="indefinite"/>
-                  </polygon>
-                  <circle cx="18" cy="22" r="2" fill="#80deea" opacity="0.7">
-                    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="90" cy="70" r="1.5" fill="#ff4081" opacity="0.6">
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
-                  </circle>
-                  
-                  {/* Libro 1 - Lila */}
-                  <rect x="25" y="45" width="18" height="35" fill="#c8b8e8" stroke="#4a3a6a" strokeWidth="2" rx="2" transform="rotate(-8 34 62)"/>
-                  <line x1="27" y1="52" x2="41" y2="50" stroke="#d8c8f8" strokeWidth="1.5" opacity="0.6"/>
-                  <line x1="27" y1="58" x2="41" y2="56" stroke="#d8c8f8" strokeWidth="1.5" opacity="0.6"/>
-                  
-                  {/* Libro 2 - Rosa */}
-                  <rect x="38" y="50" width="18" height="33" fill="#ff8fab" stroke="#4a3a6a" strokeWidth="2" rx="2" transform="rotate(5 47 66)"/>
-                  <line x1="40" y1="58" x2="54" y2="59" stroke="#ffc0d0" strokeWidth="1.5" opacity="0.6"/>
-                  <line x1="40" y1="64" x2="54" y2="65" stroke="#ffc0d0" strokeWidth="1.5" opacity="0.6"/>
-                  
-                  {/* Libro 3 - Amarillo */}
-                  <rect x="52" y="48" width="18" height="36" fill="#ffd54f" stroke="#4a3a6a" strokeWidth="2" rx="2" transform="rotate(-5 61 66)"/>
-                  <line x1="54" y1="56" x2="68" y2="55" stroke="#ffeb8f" strokeWidth="1.5" opacity="0.6"/>
-                  <line x1="54" y1="62" x2="68" y2="61" stroke="#ffeb8f" strokeWidth="1.5" opacity="0.6"/>
-                  
-                  {/* Formas geométricas Memphis */}
-                  <circle cx="20" cy="70" r="4" fill="#80deea" opacity="0.6"/>
-                  <rect x="75" y="50" width="8" height="8" fill="#9575cd" opacity="0.5" transform="rotate(45 79 54)"/>
-                  
-                  {/* Luna creciente */}
-                  <circle cx="15" cy="30" r="7" fill="#e8d8ff" opacity="0.7"/>
-                  <circle cx="17" cy="30" r="6" fill="#c8b8e8" opacity="0.5"/>
+                {/* Libros */}
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#F4C842" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="#F4C842" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <line x1="9" y1="7" x2="15" y2="7" stroke="#F4C842" strokeWidth="1.5" strokeLinecap="round"/>
+                  <line x1="9" y1="11" x2="13" y2="11" stroke="#F4C842" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               </div>
               <h3 className="section-title">{t('homepage.sections.library.title')}</h3>
@@ -192,49 +136,10 @@ function HomePage() {
             {/* ✍️ SECCIÓN 3: CREA TUS CUENTOS */}
             <div className="section-card create-card">
               <div className="section-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  {/* Estrellas brillantes */}
-                  <polygon points="20,25 22,30 27,30 23,34 25,39 20,35 15,39 17,34 13,30 18,30" fill="#ffd54f">
-                    <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
-                  </polygon>
-                  <circle cx="80" cy="30" r="2" fill="#80deea">
-                    <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="25" cy="70" r="1.5" fill="#ff4081" opacity="0.8">
-                    <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
-                  </circle>
-                  
-                  {/* Lápiz mágico principal */}
-                  <rect x="35" y="30" width="12" height="45" fill="#ffd54f" stroke="#4a3a6a" strokeWidth="2" rx="2" transform="rotate(-25 41 52)"/>
-                  <path d="M 32 66 L 41 52 L 47 55 L 38 69 Z" fill="#ffb74d" stroke="#4a3a6a" strokeWidth="2" transform="rotate(-25 41 52)"/>
-                  <polygon points="32,66 35,75 38,69" fill="#d4a574" stroke="#4a3a6a" strokeWidth="1.5" transform="rotate(-25 41 52)"/>
-                  
-                  {/* Goma de borrar lila */}
-                  <rect x="40" y="28" width="7" height="8" fill="#c8b8e8" stroke="#4a3a6a" strokeWidth="1.5" rx="1" transform="rotate(-25 41 52)"/>
-                  
-                  {/* Líneas mágicas saliendo del lápiz */}
-                  <path d="M 25 75 Q 30 72 35 75" stroke="#9575cd" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
-                  <path d="M 30 80 Q 35 78 40 82" stroke="#80deea" strokeWidth="2" fill="none" opacity="0.7" strokeLinecap="round"/>
-                  <path d="M 22 82 Q 25 80 28 83" stroke="#ff4081" strokeWidth="2" fill="none" opacity="0.6" strokeLinecap="round"/>
-                  
-                  {/* Destellos creativos */}
-                  <line x1="60" y1="45" x2="70" y2="40" stroke="#ffd54f" strokeWidth="2" opacity="0.8" strokeLinecap="round">
-                    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1s" repeatCount="indefinite"/>
-                  </line>
-                  <line x1="55" y1="55" x2="65" y2="58" stroke="#ff4081" strokeWidth="2" opacity="0.7" strokeLinecap="round">
-                    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.2s" repeatCount="indefinite"/>
-                  </line>
-                  <line x1="62" y1="50" x2="72" y2="52" stroke="#80deea" strokeWidth="2" opacity="0.6" strokeLinecap="round">
-                    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.4s" repeatCount="indefinite"/>
-                  </line>
-                  
-                  {/* Formas geométricas Memphis flotantes */}
-                  <circle cx="75" cy="65" r="5" fill="#c8b8e8" opacity="0.5"/>
-                  <rect x="80" y="72" width="6" height="6" fill="#ff8fab" opacity="0.5" transform="rotate(30 83 75)"/>
-                  
-                  {/* Planeta decorativo */}
-                  <circle cx="85" cy="20" r="6" fill="#9575cd" opacity="0.6"/>
-                  <ellipse cx="85" cy="20" rx="10" ry="2" fill="none" stroke="#d8c8f8" strokeWidth="1.5" opacity="0.5"/>
+                {/* Lápiz / crear */}
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 20h9" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <h3 className="section-title">{t('homepage.sections.create.title')}</h3>
@@ -285,19 +190,38 @@ function HomePage() {
             <h2 className="section-title">{t('homepage.featuresTitle')}</h2>
             <div className="features-grid">
               <div className="feature-card">
-                <div className="feature-icon">🎯</div>
+                <div className="feature-icon">
+                  {/* Estrella / cuento único */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" fill="#F4C842"/>
+                  </svg>
+                </div>
                 <h3>{t('homepage.uniqueStoriesTitle')}</h3>
                 <p>{t('homepage.uniqueStoriesDescription')}</p>
               </div>
               
               <div className="feature-card">
-                <div className="feature-icon">🌍</div>
+                <div className="feature-icon">
+                  {/* Globo terráqueo */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#A78BFA" strokeWidth="2"/>
+                    <ellipse cx="12" cy="12" rx="4" ry="10" stroke="#A78BFA" strokeWidth="2"/>
+                    <path d="M2 12h20" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M4.93 7h14.14M4.93 17h14.14" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
                 <h3>{t('homepage.languageLevelsTitle')}</h3>
                 <p>{t('homepage.languageLevelsDescription')}</p>
               </div>
               
               <div className="feature-card">
-                <div className="feature-icon">🎧</div>
+                <div className="feature-icon">
+                  {/* Auriculares */}
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" stroke="#4ECDC4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
                 <h3>{t('homepage.audioConversionTitle')}</h3>
                 <p>{t('homepage.audioConversionDescription')}</p>
               </div>

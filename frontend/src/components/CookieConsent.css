@@ -1,112 +1,27 @@
-.cookie-consent-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-  padding: 1rem;
-  animation: slideUp 0.5s ease-out;
+/* CookieConsent — Noche Mágica */
+.cookie-consent {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: #132236;
+  border-top: 1px solid rgba(244,200,66,0.12);
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
+  padding: 1.25rem 1.5rem;
+  animation: slideUp 0.4s cubic-bezier(0.16,1,0.3,1);
 }
+@keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
+.cookie-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
 
-.cookie-consent-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem;
-}
+.cookie-text { flex: 1; min-width: 200px; }
+.cookie-text p { color: #A8BBCF; font-size: 0.9rem; line-height: 1.6; margin: 0; }
+.cookie-text a { color: #F4C842; font-weight: 600; }
+.cookie-text a:hover { color: #F9E08A; }
 
-.cookie-icon {
-  font-size: 2.5rem;
-}
+.cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; flex-wrap: wrap; }
 
-.cookie-text {
-  flex: 1;
-  min-width: 200px;
-}
+.cookie-accept-btn { background: #F4C842; color: #0D1B2A; border: none; border-radius: 9999px; padding: 0.65rem 1.5rem; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; font-family: 'Nunito', sans-serif; }
+.cookie-accept-btn:hover { background: #D4A82A; transform: translateY(-1px); }
 
-.cookie-text h3 {
-  margin: 0 0 0.5rem;
-  color: var(--primary);
-  font-size: 1.2rem;
-}
+.cookie-decline-btn { background: transparent; border: 1px solid rgba(184,204,228,0.2); color: #6B84A0; border-radius: 9999px; padding: 0.65rem 1.25rem; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s ease; font-family: 'Nunito', sans-serif; }
+.cookie-decline-btn:hover { border-color: rgba(184,204,228,0.4); color: #A8BBCF; }
 
-.cookie-text p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--text);
-  line-height: 1.4;
-}
-
-.cookie-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
-
-.cookie-accept-btn, .cookie-reject-btn {
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-  font-size: 0.9rem;
-}
-
-.cookie-accept-btn {
-  background-color: var(--primary);
-  color: white;
-}
-
-.cookie-accept-btn:hover {
-  background-color: var(--primary-dark);
-}
-
-.cookie-reject-btn {
-  background-color: #f1f3f5;
-  color: var(--text);
-}
-
-.cookie-reject-btn:hover {
-  background-color: #e9ecef;
-}
-
-.cookie-more-info {
-  color: var(--primary);
-  text-decoration: underline;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-}
-
-.cookie-more-info:hover {
-  color: var(--primary-dark);
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .cookie-consent-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .cookie-buttons {
-    justify-content: center;
-    width: 100%;
-  }
-} 
+@media (max-width: 600px) { .cookie-inner { flex-direction: column; } }

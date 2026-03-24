@@ -1,49 +1,16 @@
-.retry-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px 16px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  color: #495057;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+/* RetryButton — Noche Mágica */
+.retry-btn {
+  background: rgba(244,200,66,0.1);
+  border: 1px solid rgba(244,200,66,0.25);
+  color: #F4C842; border-radius: 9999px;
+  padding: 0.65rem 1.5rem; font-size: 0.9rem;
+  font-weight: 800; cursor: pointer;
+  transition: all 0.2s ease; display: inline-flex;
+  align-items: center; gap: 0.4rem;
+  font-family: 'Nunito', sans-serif;
 }
-
-.retry-button:hover {
-  background-color: #e9ecef;
-  border-color: #ced4da;
-}
-
-.retry-button:active {
-  background-color: #dee2e6;
-}
-
-.retry-button.loading {
-  cursor: default;
-  opacity: 0.7;
-}
-
-.retry-icon {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.loading-spinner {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #495057;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-} 
+.retry-btn:hover { background: #F4C842; color: #0D1B2A; transform: translateY(-1px); }
+.retry-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+.retry-btn .retry-icon { animation: spin 0.8s linear infinite; display: none; }
+.retry-btn.loading .retry-icon { display: block; }
+@keyframes spin { to { transform: rotate(360deg); } }

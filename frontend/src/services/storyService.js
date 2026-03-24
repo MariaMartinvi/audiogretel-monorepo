@@ -261,7 +261,7 @@ export const generateStory = async (storyData) => {
       // Try to refresh the user session one time
       try {
         console.log('🔄 Attempting to refresh user session...');
-        const currentUser = auth.currentUser;
+        const currentUser = auth?.currentUser;
         if (currentUser) {
           // Force token refresh
           const newToken = await currentUser.getIdToken(true);

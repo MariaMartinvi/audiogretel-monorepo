@@ -1,15 +1,15 @@
-/* Modern Global Styles */
+/* =============================================
+   App.css — AudioGretel · Noche Mágica
+   ============================================= */
 
-/* Reset and base styles */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
+/* El body base lo define global.css / index.css */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  line-height: 1.6;
-  color: #2d3748;
-  background: linear-gradient(135deg, #f8faff 0%, #ffffff 50%, #f0f7ff 100%);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.65;
+  color: #EEF2F7;
+  background-color: #0D1B2A;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -17,203 +17,137 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  text-align: center;
-  min-height: 100vh;
-  position: relative;
-}
+html { scroll-behavior: smooth; }
 
-.App::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(118, 75, 162, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Typography improvements */
-h1 {
-  color: #4a3a6a;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  text-shadow: 2px 2px 0px rgba(200, 184, 232, 0.6);
-  filter: drop-shadow(0 0 10px rgba(200, 184, 232, 0.3));
-}
-
-h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  letter-spacing: -0.5px;
+/* Eliminar gradient en headings para que cada componente controle su color */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* Sin background-clip ni text-fill-color — lo controla cada módulo */
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-shadow: none;
+  filter: none;
+  letter-spacing: normal;
 }
 
 p {
   font-weight: 500;
   line-height: 1.7;
-  color: #4a5568;
+  color: #A8BBCF;
 }
 
-/* Button improvements */
+/* Contenedor base */
+.App {
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Botones base */
 button, .btn {
   font-family: inherit;
   font-weight: 700;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s ease;
   cursor: pointer;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   position: relative;
-  overflow: hidden;
 }
 
-/* Container improvements */
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
+/* Focus accesible */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(244,200,66,0.2);
 }
 
-/* Subscription status improvements */
+::selection {
+  background: rgba(244,200,66,0.2);
+  color: #EEF2F7;
+}
+
+/* =============================================
+   SUSCRIPCIÓN / PERFIL (páginas internas)
+   ============================================= */
+
 .subscription-status {
   margin: 2rem 0;
   padding: 2.5rem;
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
-  backdrop-filter: blur(20px);
-  box-shadow: 
-    0 20px 40px rgba(102, 126, 234, 0.1),
-    0 8px 32px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  background: #132236;
+  border: 1px solid rgba(244,200,66,0.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
 .subscription-status:hover {
-  transform: translateY(-4px);
-  box-shadow: 
-    0 25px 50px rgba(102, 126, 234, 0.15),
-    0 12px 40px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
 
-.status-info {
-  text-align: center;
-}
+.status-info { text-align: center; }
 
 .status-info h3 {
   margin: 0 0 1.5rem;
-  font-size: 1.8rem;
-  color: #2d3748;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 1.6rem;
+  color: #F4C842;
+  font-family: 'Lora', Georgia, serif;
 }
 
 .subscribe-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #F4C842;
+  color: #0D1B2A;
   border: none;
-  padding: 1.2rem 2.5rem;
-  border-radius: 16px;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
   cursor: pointer;
   font-weight: 800;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.subscribe-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transition: left 0.6s ease;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(244,200,66,0.25);
 }
 
 .subscribe-button:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
-}
-
-.subscribe-button:hover::before {
-  left: 100%;
+  background: #D4A82A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244,200,66,0.35);
 }
 
 .subscribe-button:disabled {
-  background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+  background: #1E3A5F;
+  color: #6B84A0;
   cursor: not-allowed;
   transform: none;
-  box-shadow: 0 4px 12px rgba(160, 174, 192, 0.2);
+  box-shadow: none;
 }
 
+/* Error */
 .error-message {
-  color: #e53e3e;
+  color: #F87171;
   margin-top: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(254, 242, 242, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(254, 226, 226, 0.5);
-  box-shadow: 
-    0 8px 24px rgba(239, 68, 68, 0.1),
-    0 4px 16px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: rgba(248,113,113,0.08);
+  border: 1px solid rgba(248,113,113,0.2);
   font-weight: 600;
 }
 
-/* Loading animations */
+/* Loading */
 .loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(102, 126, 234, 0.2);
+  width: 40px; height: 40px;
+  border: 4px solid rgba(244,200,66,0.15);
   border-radius: 50%;
-  border-top-color: #667eea;
+  border-top-color: #F4C842;
   animation: spin 1s linear infinite;
   margin: 2rem auto;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility */
-*:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-}
-
-/* Selection styles */
-::selection {
-  background: rgba(102, 126, 234, 0.2);
-  color: #2d3748;
-}
+@keyframes spin { to { transform: rotate(360deg); } }

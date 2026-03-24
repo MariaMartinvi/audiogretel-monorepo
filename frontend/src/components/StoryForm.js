@@ -229,7 +229,7 @@ function StoryForm({ onStoryGenerated }) {
         console.log('🔍 StoryForm: Loading user data...');
         
         // Check Firebase Auth state first
-        const firebaseUser = auth.currentUser;
+        const firebaseUser = auth?.currentUser ?? null;
         console.log('🔍 StoryForm: Firebase user:', firebaseUser ? firebaseUser.email : 'No user');
         
         if (!firebaseUser) {
