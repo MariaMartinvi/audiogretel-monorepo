@@ -39,3 +39,83 @@
 .story-form-submit:disabled, .generate-btn:disabled { background: #1E3A5F; color: #4a6480; cursor: not-allowed; transform: none; box-shadow: none; }
 
 @media (max-width: 600px) { .story-form .form-row { flex-direction: column; } }
+
+/* Modal de límite / aviso (clases warning-* en StoryForm.js) */
+.warning-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(5, 12, 22, 0.88);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: agWarningFade 0.2s ease;
+}
+@keyframes agWarningFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.warning-modal {
+  background: #132236;
+  border: 1px solid rgba(244, 200, 66, 0.22);
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+.warning-content {
+  padding: 1.75rem 1.5rem 1rem;
+}
+.warning-content p {
+  color: #EEF2F7;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 500;
+}
+.warning-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1.5rem;
+  justify-content: flex-end;
+}
+.warning-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.8rem 1.35rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  border: 2px solid transparent;
+}
+.warning-btn-primary {
+  background: #F4C842;
+  color: #0D1B2A;
+  border-color: #F4C842;
+  box-shadow: 0 4px 16px rgba(244, 200, 66, 0.28);
+}
+.warning-btn-primary:hover {
+  background: #D4A82A;
+  transform: translateY(-1px);
+}
+.warning-btn-secondary {
+  background: transparent;
+  color: #C5D4E5;
+  border-color: rgba(184, 204, 228, 0.4);
+}
+.warning-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #EEF2F7;
+  border-color: rgba(244, 200, 66, 0.35);
+}
+@media (max-width: 420px) {
+  .warning-actions { flex-direction: column; }
+  .warning-btn { width: 100%; min-width: 0; }
+}

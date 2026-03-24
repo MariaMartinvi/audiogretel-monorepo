@@ -2,6 +2,105 @@
 
 .contact-page { background: #0D1B2A; min-height: 100vh; }
 
+/* Clases usadas en ContactPage.js */
+.contact-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.contact-form {
+  background: #132236;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(244, 200, 66, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.25rem;
+}
+.contact-form label {
+  display: block;
+  color: #A8BBCF;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: #0f2035;
+  border: 1px solid rgba(184, 204, 228, 0.15);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  color: #EEF2F7;
+  font-size: 0.95rem;
+  font-family: 'Nunito', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(244, 200, 66, 0.45);
+  box-shadow: 0 0 0 3px rgba(244, 200, 66, 0.08);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #4a6480;
+}
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form .submit-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #F4C842;
+  color: #0D1B2A;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.9rem 2rem;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(244, 200, 66, 0.22);
+}
+.contact-form .submit-button:hover:not(:disabled) {
+  background: #D4A82A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 200, 66, 0.3);
+}
+.contact-form .submit-button:disabled {
+  background: #1E3A5F;
+  color: #6B84A0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form .status-message {
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.contact-form .status-message.success {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  color: #6EE7B7;
+}
+.contact-form .status-message.error {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.28);
+  color: #FCA5A5;
+}
+
 .contact-hero {
   background: linear-gradient(160deg, #071220 0%, #0D1B2A 50%, #132236 100%);
   padding: 4.5rem 1.5rem 3.5rem; text-align: center;

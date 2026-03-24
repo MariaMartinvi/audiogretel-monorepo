@@ -488,6 +488,10 @@ function StoryForm({ onStoryGenerated }) {
       return;
     }
 
+    if (!canGenerateStory()) {
+      return;
+    }
+
     setIsLoading(true);
     setError(null);
 
@@ -950,7 +954,7 @@ function StoryForm({ onStoryGenerated }) {
       return false;
     }
 
-    if (storiesRemaining <= 0) {
+    if (storiesRemaining !== null && storiesRemaining <= 0) {
       if (user.subscriptionStatus === 'active') {
         showWarningModal('premiumLimit');
       } else {
@@ -962,24 +966,20 @@ function StoryForm({ onStoryGenerated }) {
     return true;
   };
 
-  // Event handlers for form fields with warning check
+  // Los campos siempre se pueden editar; el límite se comprueba al enviar (canGenerateStory en handleSubmit).
   const handleChildNamesChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setChildNames(e.target.value);
   };
 
   const handleEnglishLevelChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setEnglishLevel(e.target.value);
   };
 
   const handleStoryLanguageChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setStoryLanguage(e.target.value);
   };
 
   const handleLearningModeChange = (e) => {
-    if (!canGenerateStory()) return;
     setLearningMode(e.target.checked);
     // Si desactiva el modo aprendizaje, limpiar las palabras
     if (!e.target.checked) {
@@ -988,7 +988,6 @@ function StoryForm({ onStoryGenerated }) {
   };
 
   const handleVocabularyWordsChange = (e) => {
-    if (!canGenerateStory()) return;
     const value = e.target.value;
     // Contar palabras (separadas por comas)
     const wordCount = value.split(',').filter(word => word.trim().length > 0).length;
@@ -999,30 +998,22 @@ function StoryForm({ onStoryGenerated }) {
   };
 
   const handleLengthChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setStoryLength(e.target.value);
   };
 
   const handleTypeChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setStoryType(e.target.value);
   };
 
   const handleAgeGroupChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setAgeGroup(e.target.value);
   };
 
   const handleCreativityLevelChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
     setCreativityLevel(e.target.value);
   };
 
-  // Handler para topic con validación temprana
   const handleTopicChangeWithCheck = (e) => {
-    if (!canGenerateStory()) return;
-    
-    // Limpiar mensaje de validación HTML5
     const input = e.target;
     input.setCustomValidity('');
     setTopic(e.target.value);

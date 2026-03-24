@@ -227,6 +227,34 @@ button {
 }
 
 /* =============================================
+   PAGE HEADER (About, Contact, páginas legales con .page-header)
+   ============================================= */
+.page-header {
+  background: linear-gradient(160deg, #071220 0%, #0D1B2A 40%, #132236 100%);
+  padding: 4.5rem 1.5rem 2.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(244, 200, 66, 0.08);
+}
+.page-header h1 {
+  font-family: 'Lora', Georgia, serif;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+.page-header p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+/* =============================================
    MISC
    ============================================= */
 .action-section { margin-bottom: 1.5rem; }

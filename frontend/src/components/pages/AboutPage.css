@@ -2,6 +2,121 @@
 
 .about-page { background: #0D1B2A; min-height: 100vh; }
 
+/* Clases usadas en AboutPage.js (coinciden con el JSX) */
+.about-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.about-content { margin-bottom: 2.75rem; }
+
+.about-text h2 {
+  font-family: 'Lora', Georgia, serif;
+  color: #F9E08A;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: none;
+  -webkit-text-fill-color: #F9E08A;
+}
+
+.about-text p {
+  color: #A8BBCF;
+  font-size: 1rem;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.team-section {
+  margin: 3rem 0 2.5rem;
+  text-align: center;
+}
+
+.team-section .section-title {
+  font-family: 'Lora', Georgia, serif;
+  color: #F9E08A;
+  font-size: clamp(1.5rem, 3.5vw, 1.95rem);
+  margin-bottom: 1rem;
+  background: none;
+  -webkit-text-fill-color: #F9E08A;
+}
+
+.team-description {
+  color: #A8BBCF;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  padding: 0 0.25rem;
+}
+
+.team-link {
+  color: #60A5FA;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.team-link:hover { color: #93C5FD; }
+
+.team-member {
+  background: #132236;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(184, 204, 228, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  text-align: center;
+}
+.team-member:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 200, 66, 0.2);
+}
+.team-member h3 {
+  font-family: 'Lora', Georgia, serif;
+  color: #F9E08A;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: none;
+  -webkit-text-fill-color: #F9E08A;
+}
+.team-member p {
+  color: #A8BBCF;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+.value-item {
+  background: #132236;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(184, 204, 228, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.value-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(244, 200, 66, 0.18);
+}
+.value-item h3 {
+  font-family: 'Lora', Georgia, serif;
+  color: #F9E08A;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  background: none;
+  -webkit-text-fill-color: #F9E08A;
+}
+.value-item p {
+  color: #A8BBCF;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
 .about-hero {
   background: linear-gradient(160deg, #071220 0%, #0D1B2A 40%, #132236 100%);
   padding: 5rem 1.5rem 4rem; text-align: center;
